@@ -1,0 +1,113 @@
+/* =============================================
+   RODAPE.CSS
+   chaysouza.com.br
+   ============================================= */
+
+.rodape {
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  padding: 80px 20px 40px;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Coluna de marca */
+.rodape-nome {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+.rodape-descricao {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  opacity: 0.7;
+  max-width: 360px;
+}
+
+/* Links de navegação */
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rodape-links a {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.rodape-links a:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+/* Ícones sociais */
+.rodape-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rodape-social a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  opacity: 0.65;
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.rodape-social a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.rodape-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Copyright */
+.rodape-copy {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.82rem;
+  opacity: 0.5;
+  letter-spacing: 0.02em;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .rodape-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .rodape-descricao {
+    margin: 0 auto;
+  }
+
+  .rodape-links {
+    align-items: center;
+  }
+
+  .rodape-social {
+    justify-content: center;
+  }
+}

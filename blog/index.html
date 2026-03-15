@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Chayene de Souza — Sites para Psicólogas</title>
+  <meta name="description" content="Conteúdo sobre presença digital, como aparecer no Google e como atrair pacientes online. Escrito por Chayene de Souza, especialista em sites para psicólogas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chaysouza.com.br/blog/">
+
+  <meta property="og:title" content="Blog | Chayene de Souza">
+  <meta property="og:description" content="Conteúdo sobre presença digital e como psicólogas podem atrair mais pacientes pelo Google.">
+  <meta property="og:url" content="https://www.chaysouza.com.br/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Chayene de Souza">
+
+  <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="../assets/styles/reset.css">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="blog-index.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP4M87RPT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTP4M87RPT');
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="logo">CS.</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="../index.html#inicio">Início</a></li>
+          <li><a href="../index.html#sobre">Sobre</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+          <li><a href="../index.html#projetos">Projetos</a></li>
+          <li><a href="../index.html#planos">Planos</a></li>
+          <li><a href="index.html" aria-current="page">Blog</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" aria-pressed="false">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-index-main">
+
+    <!-- HERO DA LISTAGEM -->
+    <section class="blog-index-hero">
+      <div class="blog-index-hero__inner">
+        <span class="tag">Blog</span>
+        <h1 class="blog-index-hero__titulo">
+          Conteúdo para <strong>psicólogas</strong>
+        </h1>
+        <p class="blog-index-hero__subtitulo">
+          Presença digital, como aparecer no Google e como atrair mais pacientes.
+        </p>
+      </div>
+    </section>
+
+    <!-- LISTAGEM -->
+    <section class="blog-index-listagem">
+      <div class="blog-index-container">
+
+        <!-- Loading -->
+        <div class="blog-loading" id="blogLoading">
+          <div class="blog-loading__spinner"></div>
+          <span>Carregando artigos...</span>
+        </div>
+
+        <!-- Erro -->
+        <div class="blog-index-erro" id="blogErro" hidden>
+          <p>Não foi possível carregar os artigos. Tente novamente em instantes.</p>
+        </div>
+
+        <!-- Vazio -->
+        <div class="blog-index-vazio" id="blogVazio" hidden>
+          <p>Nenhum artigo publicado ainda. Volte em breve!</p>
+        </div>
+
+        <!-- Grid de artigos -->
+        <div class="blog-index-grid" id="blogGrid" hidden></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="rodape-brand">
+        <span class="rodape-nome">Chayene de Souza</span>
+        <p class="rodape-descricao">
+          Especialista em sites para psicólogas. Ajudo profissionais de psicologia
+          a serem encontradas no Google e a conquistar mais pacientes.
+        </p>
+      </div>
+      <div class="rodape-links">
+        <a href="../index.html#sobre">Sobre</a>
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#contato">Contato</a>
+      </div>
+      <div class="rodape-social">
+        <a href="https://wa.link/rh55kd" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M20 3.9A11 11 0 0 0 3.5 18.5L3 21l2.6-.5A11 11 0 1 0 20 3.9Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="https://www.instagram.com/chaydesouza.digital/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="10" x2="8" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="rodape-copy">
+      © 2026 · Chayene de Souza · Todos os direitos reservados
+    </div>
+  </footer>
+
+  <a href="https://wa.link/rh55kd" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="blog-index.js"></script>
+</body>
+</html>

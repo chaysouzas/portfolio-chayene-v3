@@ -1,0 +1,69 @@
+# robots.txt — chaysouza.com.br
+# Atualizado: 2026
+
+# ── Regras gerais para todos os bots ──────────────────────
+User-agent: *
+
+# Permite indexação das páginas principais
+Allow: /$
+Allow: /index.html
+Allow: /blog/$
+Allow: /blog/index.html
+
+# Bloqueia a página de artigo sem slug (sem conteúdo útil)
+Disallow: /blog/post.html$
+
+# Bloqueia o Sanity Studio (painel administrativo)
+Disallow: /studio/
+
+# Bloqueia assets e arquivos internos
+Disallow: /assets/styles/
+Disallow: /assets/favicon/
+
+# ── Google ─────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Allow: /blog/
+Disallow: /studio/
+
+# ── Bots de IA (GEO) ──────────────────────────────────────
+# Permite que IAs leiam o conteúdo do site e do blog
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /blog/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /blog/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /blog/
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /blog/
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /blog/
+
+# ── Bots indesejados ──────────────────────────────────────
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ── Sitemap ───────────────────────────────────────────────
+Sitemap: https://www.chaysouza.com.br/sitemap.xml

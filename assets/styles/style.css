@@ -1,0 +1,116 @@
+/* =============================================
+   STYLE.CSS — Variáveis, Tipografia, Animações Globais
+   chaysouza.com.br
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import url('./header.css');
+@import url('./main.css');
+@import url('./faq.css');
+@import url('./contato.css');
+@import url('./rodape.css');
+@import url('./blog.css');
+
+/* =============================================
+   VARIÁVEIS — TEMA DARK (padrão)
+   ============================================= */
+
+:root {
+  --bg-color:       #0a0f14;
+  --text-color:     #f1f5f9;
+  --surface-color:  #111827;
+  --primary-color:  #5CDFF2;
+  --accent-color:   #FF1010;
+  --border-color:   rgba(255, 255, 255, 0.08);
+  --bg-sobre:       linear-gradient(180deg, #111827 0%, #0a0f14 100%);
+  --bg-contato:     #111827;
+  --btn-text:       #0a0f14;
+  --fonte-principal: "Outfit", sans-serif;
+}
+
+/* =============================================
+   VARIÁVEIS — TEMA LIGHT
+   ============================================= */
+
+html.light {
+  --bg-color:      #ffffff;
+  --text-color:    #0f172a;
+  --surface-color: #f5f7fa;
+  --primary-color: #0077ff;
+  --accent-color:  #ff3b3b;
+  --border-color:  rgba(0, 0, 0, 0.08);
+  --bg-sobre:      linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  --bg-contato:    #f8fafc;
+  --btn-text:      #ffffff;
+}
+
+/* =============================================
+   BASE DO BODY
+   ============================================= */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--fonte-principal);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+[hidden] { display: none !important; }
+/* =============================================
+   UTILITÁRIOS GLOBAIS
+   ============================================= */
+
+/* Container padrão — usado em .servicos e .projetos */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Tag de seção (ex: "Sobre mim", "Processo") */
+.tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* Fade-up via IntersectionObserver */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+/* =============================================
+   ANIMAÇÕES GLOBAIS
+   ============================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underline {
+  to { width: 100%; }
+}
+
+@keyframes pulsate-bck {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(0.92); }
+}
