@@ -376,7 +376,7 @@ function renderBlog(posts) {
   // ── Renderiza os cards do grid ──
   const grid = document.getElementById('blogGrid');
   grid.innerHTML = demais.map(post => `
-    <a href="blog/${post.slug}.html" class="blog-card">
+    <a href="blog/post.html?slug=${post.slug}" class="blog-card">
       <div class="blog-card__img">
         ${post.imagemUrl
           ? `<img src="${post.imagemUrl}?w=600&auto=format" alt="${post.imagemAlt || post.titulo}" loading="lazy">`
