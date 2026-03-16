@@ -343,7 +343,7 @@ function renderBlog(posts) {
  
   // ── Renderiza o card destaque ──
   const linkDestaque = document.getElementById('blogDestaque');
-  linkDestaque.href  = `blog/${destaque.slug}.html`;
+  linkDestaque.href = `blog/post.html?slug=${destaque.slug}`;
  
   // Imagem
   const imgContainer = document.getElementById('blogDestaqueImg');
