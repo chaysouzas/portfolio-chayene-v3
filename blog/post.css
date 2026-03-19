@@ -1,8 +1,3 @@
-/* ============================================================
-   POST.CSS — Página individual do artigo
-   Localização: blog/post.css
-============================================================ */
-
 /* Garante que [hidden] funciona mesmo com display: flex ou grid */
 [hidden] { display: none !important; }
 

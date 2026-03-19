@@ -1,8 +1,3 @@
-/* ============================================================
-   BLOG-INDEX.CSS — Listagem de artigos
-   Localização: blog/blog-index.css
-============================================================ */
-
 /* Garante que [hidden] funciona mesmo com display: flex ou grid */
 [hidden] { display: none !important; }
 
