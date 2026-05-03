@@ -1,0 +1,41 @@
+:root {
+  --cor-fundo: #f9f9f8;
+  --cor-texto: #0d2828;
+  --cor-texto-suave: #4a6262;
+  --cor-primaria: #0d4545;
+  --cor-primaria-hover: #0a3535;
+  --cor-decorativa: #7ab5c2;
+  --cor-branco: #ffffff;
+  --cor-fundo-menta: #c8eeed;
+
+  --fonte-logo: 'Outfit', sans-serif;
+  --fonte-titulo: 'Outfit', sans-serif;
+  --fonte-corpo: 'Outfit', sans-serif;
+
+  --texto-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+  --texto-sm: clamp(0.875rem, 2vw, 1rem);
+  --texto-md: clamp(1rem, 2.2vw, 1.125rem);
+  --texto-lg: clamp(1.125rem, 2.5vw, 1.375rem);
+  --texto-hero: clamp(2.25rem, 5.5vw, 4rem);
+
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-5: 1.25rem;
+  --espaco-6: 1.5rem;
+  --espaco-8: 2rem;
+  --espaco-10: 2.5rem;
+  --espaco-12: 3rem;
+  --espaco-16: 4rem;
+  --espaco-20: 5rem;
+  --espaco-24: 6rem;
+
+  --largura-max: 1280px;
+  --altura-cabecalho: 68px;
+  --raio-sm: 6px;
+  --raio-md: 12px;
+  --raio-pill: 100px;
+
+  --transicao: 0.25s ease;
+}

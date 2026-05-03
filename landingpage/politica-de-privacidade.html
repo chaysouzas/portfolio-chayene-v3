@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade | CS. Studio</title>
+  <meta name="description" content="Como a CS. Studio coleta, usa e protege seus dados pessoais, conforme a Lei Geral de Proteção de Dados (LGPD).">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://chaysouza.com.br/sites-para-psicologas/politica-de-privacidade.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Tokens ─────────────────────────────────────────── */
+    :root {
+      --cor-fundo:       #f5fafa;
+      --cor-superficie:  #ffffff;
+      --cor-borda:       #daeaea;
+      --cor-primaria:    #0f3a3a;
+      --cor-acento:      #1a7a6e;
+      --cor-acento-soft: #e6f4f1;
+      --cor-texto:       #1a2a2a;
+      --cor-texto-suave: #4a6060;
+      --cor-texto-util:  #6a8080;
+
+      --fonte: 'Outfit', system-ui, sans-serif;
+
+      --raio:   10px;
+      --max:    760px;
+      --espaco: clamp(1rem, 4vw, 2rem);
+    }
+
+    /* ─── Reset mínimo ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fonte);
+      background: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--cor-acento); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--cor-primaria); }
+
+    /* ─── Header ─────────────────────────────────────────── */
+    .cabecalho {
+      background: var(--cor-primaria);
+      padding: 1.1rem var(--espaco);
+    }
+    .cabecalho-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .cabecalho-voltar {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .cabecalho-voltar:hover { color: #ffffff; }
+    .cabecalho-voltar svg { flex-shrink: 0; }
+
+    /* ─── Hero da página ─────────────────────────────────── */
+    .hero-legal {
+      background: var(--cor-primaria);
+      padding: clamp(2.5rem, 6vw, 4rem) var(--espaco) clamp(2rem, 5vw, 3rem);
+      border-bottom: 3px solid var(--cor-acento);
+    }
+    .hero-legal-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+    .hero-legal-rotulo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cor-acento);
+      background: rgba(26,122,110,0.15);
+      padding: 0.35rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+    .hero-legal h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1.4rem;
+    }
+    .hero-legal-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .hero-legal-meta-item svg { flex-shrink: 0; opacity: 0.8; }
+    .hero-legal-meta-item strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* ─── Layout principal ───────────────────────────────── */
+    .pagina-legal {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding: clamp(2rem, 5vw, 3.5rem) var(--espaco) 4rem;
+    }
+
+    /* ─── Sumário ────────────────────────────────────────── */
+    .sumario {
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-left: 4px solid var(--cor-acento);
+      border-radius: var(--raio);
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .sumario-titulo {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cor-texto-util);
+      margin-bottom: 0.9rem;
+    }
+    .sumario ol {
+      list-style: decimal;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+    .sumario ol li a {
+      font-size: 0.9rem;
+      color: var(--cor-acento);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sumario ol li a:hover { text-decoration: underline; }
+
+    /* ─── Seções ─────────────────────────────────────────── */
+    .secao-legal {
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+    .secao-legal h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--cor-primaria);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--cor-borda);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .secao-legal h2 .num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cor-acento);
+      background: var(--cor-acento-soft);
+      padding: 0.2rem 0.55rem;
+      border-radius: 50px;
+      flex-shrink: 0;
+    }
+    .secao-legal h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cor-texto);
+      margin: 1.4rem 0 0.5rem;
+    }
+    .secao-legal p {
+      font-size: 0.95rem;
+      color: var(--cor-texto-suave);
+      margin-bottom: 0.85rem;
+      line-height: 1.8;
+    }
+    .secao-legal p:last-child { margin-bottom: 0; }
+    .secao-legal ul, .secao-legal ol {
+      padding-left: 1.3rem;
+      margin-bottom: 0.85rem;
+    }
+    .secao-legal li {
+      font-size: 0.95rem;
+      color: var(--cor-texto-suave);
+      margin-bottom: 0.35rem;
+      line-height: 1.7;
+    }
+    .secao-legal strong { color: var(--cor-texto); font-weight: 600; }
+
+    /* ─── Card destaque ──────────────────────────────────── */
+    .card-destaque {
+      background: var(--cor-acento-soft);
+      border: 1px solid #b8ddd8;
+      border-radius: var(--raio);
+      padding: 1.1rem 1.4rem;
+      margin: 1rem 0;
+    }
+    .card-destaque p {
+      font-size: 0.9rem;
+      color: var(--cor-primaria);
+      margin-bottom: 0;
+    }
+    .card-destaque strong { color: var(--cor-primaria); }
+
+    /* ─── Tabela de dados ────────────────────────────────── */
+    .tabela-wrap { overflow-x: auto; margin: 1rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      min-width: 500px;
+    }
+    thead th {
+      background: var(--cor-primaria);
+      color: #ffffff;
+      font-weight: 600;
+      text-align: left;
+      padding: 0.7rem 1rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+    }
+    tbody tr:nth-child(even) { background: var(--cor-acento-soft); }
+    tbody td {
+      padding: 0.65rem 1rem;
+      color: var(--cor-texto-suave);
+      border-bottom: 1px solid var(--cor-borda);
+      vertical-align: top;
+    }
+    tbody td:first-child { color: var(--cor-texto); font-weight: 500; }
+
+    /* ─── Lista de direitos ──────────────────────────────── */
+    .direitos-grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    .direito-card {
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      padding: 1rem 1.1rem;
+    }
+    .direito-card-titulo {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--cor-primaria);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .direito-card-titulo svg { flex-shrink: 0; color: var(--cor-acento); }
+    .direito-card p {
+      font-size: 0.82rem;
+      color: var(--cor-texto-util);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ─── Card contato DPO ───────────────────────────────── */
+    .card-contato {
+      background: var(--cor-primaria);
+      border-radius: var(--raio);
+      padding: 1.5rem 1.6rem;
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-contato-info { flex: 1; min-width: 180px; }
+    .card-contato-rotulo {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cor-acento);
+      margin-bottom: 0.4rem;
+    }
+    .card-contato-nome {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+    .card-contato-sub {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .card-contato-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--cor-acento);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .card-contato-link:hover { background: #15635a; color: #ffffff; }
+
+    /* ─── Rodapé ─────────────────────────────────────────── */
+    .rodape {
+      background: var(--cor-primaria);
+      padding: 1.8rem var(--espaco);
+      text-align: center;
+    }
+    .rodape-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .rodape-copy {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .rodape-links {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+    }
+    .rodape-links a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+    }
+    .rodape-links a:hover { color: #ffffff; }
+
+    /* ─── Responsivo ─────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .direitos-grade { grid-template-columns: 1fr 1fr; }
+      .card-contato { flex-direction: column; }
+      .hero-legal-meta { flex-direction: column; gap: 0.7rem; }
+    }
+    @media (max-width: 400px) {
+      .direitos-grade { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-inner">
+      <a href="index.html" class="logo" aria-label="CS. Studio — Página inicial">cs.</a>
+      <a href="index.html" class="cabecalho-voltar" aria-label="Voltar para a página principal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Voltar ao site
+      </a>
+    </div>
+  </header>
+
+  <div class="hero-legal" role="banner">
+    <div class="hero-legal-inner">
+      <div class="hero-legal-rotulo">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Documento legal — LGPD
+      </div>
+      <h1>Política de Privacidade</h1>
+      <div class="hero-legal-meta">
+        <span class="hero-legal-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <strong>Última atualização:</strong>&nbsp;01 de maio de 2026
+        </span>
+        <span class="hero-legal-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Leitura em aproximadamente 6 minutos
+        </span>
+        <span class="hero-legal-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          Conforme a <strong>Lei nº 13.709/2018 (LGPD)</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <main class="pagina-legal">
+
+    <nav class="sumario" aria-label="Sumário da política">
+      <p class="sumario-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#controlador">Quem é responsável pelos seus dados</a></li>
+        <li><a href="#coleta">O que eu coleto</a></li>
+        <li><a href="#finalidade">Por que eu coleto</a></li>
+        <li><a href="#bases-legais">Bases legais</a></li>
+        <li><a href="#compartilhamento">Com quem compartilho</a></li>
+        <li><a href="#retencao">Por quanto tempo guardo</a></li>
+        <li><a href="#direitos">Seus direitos</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#contato">Contato e encarregada (DPO)</a></li>
+        <li><a href="#atualizacoes">Atualizações desta política</a></li>
+      </ol>
+    </nav>
+
+    <div class="card-destaque">
+      <p>Esta política explica, em linguagem clara, como trato seus dados quando você visita o site da CS. Studio ou entra em contato comigo. Nada de jargão jurídico sem explicação. Se tiver alguma dúvida depois de ler, é só me escrever no e-mail abaixo.</p>
+    </div>
+
+    <!-- 1 -->
+    <section class="secao-legal" id="controlador">
+      <h2><span class="num">01</span> Quem é responsável pelos seus dados</h2>
+      <p>A responsável pelo tratamento dos seus dados pessoais é:</p>
+      <ul>
+        <li><strong>Nome:</strong> Chayene de Souza Silva</li>
+        <li><strong>Nome fantasia:</strong> CS. Studio</li>
+        <li><strong>Localização:</strong> Curitiba, Paraná, Brasil</li>
+        <li><strong>E-mail:</strong> <a href="mailto:web.chaysouza@gmail.com">web.chaysouza@gmail.com</a></li>
+      </ul>
+      <p>Eu sou a controladora dos seus dados, o que significa que decido como e por que eles são coletados e usados.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="secao-legal" id="coleta">
+      <h2><span class="num">02</span> O que eu coleto</h2>
+      <p>Coleto apenas o necessário para prestar o serviço ou me comunicar com você. Abaixo, o que cada canal gera:</p>
+
+      <h3>Formulário de contato (site)</h3>
+      <p>Quando você preenche o formulário, recebo: nome completo, número de WhatsApp, perfil do Instagram (opcional) e qual seu principal desafio hoje.</p>
+
+      <h3>WhatsApp</h3>
+      <p>Quando você clica no botão de WhatsApp e inicia uma conversa, a plataforma compartilha com o destinatário (eu) seu nome de perfil e número de telefone. Esse dado fica no histórico da conversa no meu celular.</p>
+
+      <h3>Google Analytics</h3>
+      <p>O site usa o Google Analytics para entender como as visitas acontecem: quais páginas foram vistas, quanto tempo ficaram, de qual cidade veio o acesso, e por qual dispositivo. Esses dados são agregados e anônimos — eu não sei quem você é a partir deles.</p>
+
+      <h3>Cookies e dados de navegação</h3>
+      <p>O site usa cookies técnicos necessários para funcionar (detalhes na <a href="#cookies">seção de cookies</a>) e os cookies do Google Analytics. Você pode recusar os cookies de análise pelo banner que aparece na primeira visita.</p>
+    </section>
+
+    <!-- 3 -->
+    <section class="secao-legal" id="finalidade">
+      <h2><span class="num">03</span> Por que eu coleto</h2>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dado</th>
+              <th>Finalidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nome e WhatsApp</td>
+              <td>Entrar em contato para responder sua mensagem e enviar proposta comercial</td>
+            </tr>
+            <tr>
+              <td>Instagram (opcional)</td>
+              <td>Analisar sua presença digital antes de enviar a proposta</td>
+            </tr>
+            <tr>
+              <td>Principal desafio</td>
+              <td>Personalizar a proposta às suas necessidades reais</td>
+            </tr>
+            <tr>
+              <td>Dados do WhatsApp</td>
+              <td>Comunicação direta durante e após a prestação de serviço</td>
+            </tr>
+            <tr>
+              <td>Dados do Analytics</td>
+              <td>Entender o comportamento de navegação para melhorar o site</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Não uso seus dados para publicidade de terceiros, não vendo listas e não faço envio de e-mail marketing sem autorização.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="secao-legal" id="bases-legais">
+      <h2><span class="num">04</span> Bases legais</h2>
+      <p>A LGPD exige que todo tratamento de dados pessoais tenha uma justificativa legal. No caso da CS. Studio, opero com base em três delas:</p>
+      <ul>
+        <li><strong>Execução de contrato (art. 7º, V):</strong> quando você é minha cliente, processo seus dados para prestar o serviço contratado.</li>
+        <li><strong>Legítimo interesse (art. 7º, IX):</strong> para responder a mensagens recebidas pelo formulário ou WhatsApp, antes de qualquer contrato firmado.</li>
+        <li><strong>Consentimento (art. 7º, I):</strong> para o uso de cookies de análise (Google Analytics). Você dá esse consentimento pelo banner de cookies, e pode retirar a qualquer momento.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section class="secao-legal" id="compartilhamento">
+      <h2><span class="num">05</span> Com quem compartilho</h2>
+      <p>Não vendo, alugo nem cedo seus dados a terceiros para fins comerciais. Compartilho apenas com os serviços que uso para operar o site e organizar meu trabalho:</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Serviço</th>
+              <th>Finalidade</th>
+              <th>País</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Analytics</td>
+              <td>Análise de tráfego do site</td>
+              <td>EUA</td>
+            </tr>
+            <tr>
+              <td>Google Search Console</td>
+              <td>Monitoramento de desempenho no Google</td>
+              <td>EUA</td>
+            </tr>
+            <tr>
+              <td>WhatsApp / Meta</td>
+              <td>Comunicação direta com clientes e leads</td>
+              <td>EUA</td>
+            </tr>
+            <tr>
+              <td>Vercel</td>
+              <td>Hospedagem e publicação do site</td>
+              <td>EUA</td>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td>Versionamento do código do site</td>
+              <td>EUA</td>
+            </tr>
+            <tr>
+              <td>Notion</td>
+              <td>Organização interna de projetos e clientes</td>
+              <td>EUA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Todos esses serviços possuem políticas próprias de privacidade e são responsáveis pelo tratamento dos dados nos seus sistemas. Quando você acessa links externos neste site, as políticas de privacidade desses destinos se aplicam.</p>
+      <div class="card-destaque">
+        <p>Transferência internacional: como alguns desses serviços têm servidores nos EUA, seus dados podem ser processados fora do Brasil. Quando isso acontece, os serviços adotam mecanismos reconhecidos de proteção de dados, como as Cláusulas Contratuais Padrão da UE.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="secao-legal" id="retencao">
+      <h2><span class="num">06</span> Por quanto tempo guardo seus dados</h2>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de dado</th>
+              <th>Prazo de retenção</th>
+              <th>Motivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Leads (sem contrato fechado)</td>
+              <td>6 meses após o último contato</td>
+              <td>Legítimo interesse comercial</td>
+            </tr>
+            <tr>
+              <td>Dados de clientes (com contrato)</td>
+              <td>Duração do serviço + 5 anos</td>
+              <td>Obrigações fiscais e contratuais</td>
+            </tr>
+            <tr>
+              <td>Dados do Google Analytics</td>
+              <td>14 meses</td>
+              <td>Configuração padrão da plataforma</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Após esses prazos, os dados são apagados ou anonimizados, exceto quando a lei exigir retenção por prazo maior.</p>
+    </section>
+
+    <!-- 7 -->
+    <section class="secao-legal" id="direitos">
+      <h2><span class="num">07</span> Seus direitos</h2>
+      <p>A LGPD garante a você os seguintes direitos em relação aos seus dados pessoais. Você pode exercê-los a qualquer momento pelo e-mail ou WhatsApp informados nesta política.</p>
+      <div class="direitos-grade">
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            Acesso
+          </div>
+          <p>Saber quais dados tenho sobre você e receber uma cópia.</p>
+        </div>
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Correção
+          </div>
+          <p>Pedir que eu corrija dados incorretos ou desatualizados.</p>
+        </div>
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+            Exclusão
+          </div>
+          <p>Solicitar a exclusão dos seus dados, quando não houver obrigação legal de guardá-los.</p>
+        </div>
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Portabilidade
+          </div>
+          <p>Receber seus dados num formato estruturado para levar a outro serviço.</p>
+        </div>
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            Oposição
+          </div>
+          <p>Se opor a um tratamento baseado em legítimo interesse, se tiver motivo legítimo.</p>
+        </div>
+        <div class="direito-card">
+          <div class="direito-card-titulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            Retirar consentimento
+          </div>
+          <p>Revogar o consentimento dado para cookies de análise, a qualquer momento.</p>
+        </div>
+      </div>
+      <p>Para exercer qualquer um desses direitos, me escreva pelo e-mail <a href="mailto:web.chaysouza@gmail.com">web.chaysouza@gmail.com</a>. Responderei em até <strong>15 dias corridos</strong>, conforme previsto na LGPD.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="secao-legal" id="seguranca">
+      <h2><span class="num">08</span> Segurança</h2>
+      <p>Adoto medidas técnicas compatíveis com uma operação do meu porte para proteger seus dados:</p>
+      <ul>
+        <li>O site usa <strong>HTTPS</strong> (comunicação criptografada entre seu navegador e o servidor).</li>
+        <li>A hospedagem é feita na <strong>Vercel</strong>, que adota práticas de segurança certificadas e faz backups automáticos.</li>
+        <li>O código-fonte fica no <strong>GitHub</strong>, em repositório privado.</li>
+        <li>As conversas pelo <strong>WhatsApp</strong> têm criptografia de ponta a ponta.</li>
+        <li>Os projetos organizados no <strong>Notion</strong> são acessados apenas por mim, com autenticação de dois fatores ativa.</li>
+      </ul>
+      <p>Nenhum sistema é 100% seguro. Em caso de incidente que possa afetar seus dados, você será notificada no prazo exigido pela LGPD.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="secao-legal" id="cookies">
+      <h2><span class="num">09</span> Cookies</h2>
+      <p>Cookies são pequenos arquivos que o site salva no seu navegador. O site da CS. Studio usa dois tipos:</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Finalidade</th>
+              <th>Base legal</th>
+              <th>Você pode recusar?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Técnicos (essenciais)</td>
+              <td>Fazer o site funcionar corretamente (preferência de banner de cookies)</td>
+              <td>Interesse legítimo</td>
+              <td>Não — sem eles o site não funciona direito</td>
+            </tr>
+            <tr>
+              <td>Análise (Google Analytics)</td>
+              <td>Entender como as pessoas navegam no site</td>
+              <td>Consentimento</td>
+              <td>Sim — pelo banner de cookies ou nas <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">configurações do Google Analytics</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Você pode também gerenciar ou excluir cookies diretamente pelo seu navegador. Para instruções, acesse as configurações de privacidade do Chrome, Firefox, Safari ou Edge.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="secao-legal" id="contato">
+      <h2><span class="num">10</span> Contato e encarregada (DPO)</h2>
+      <p>A encarregada de proteção de dados da CS. Studio, conforme exigido pelo art. 41 da LGPD, é a própria responsável pelo negócio:</p>
+      <div class="card-contato">
+        <div class="card-contato-info">
+          <div class="card-contato-rotulo">Encarregada de Dados (DPO)</div>
+          <div class="card-contato-nome">Chayene de Souza Silva</div>
+          <div class="card-contato-sub">CS. Studio · Curitiba, PR</div>
+        </div>
+        <a href="mailto:web.chaysouza@gmail.com" class="card-contato-link" aria-label="Enviar e-mail para a encarregada de dados">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          web.chaysouza@gmail.com
+        </a>
+      </div>
+      <p>Também é possível entrar em contato pela <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> caso considere que seus direitos não estão sendo respeitados: <a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a>.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="secao-legal" id="atualizacoes">
+      <h2><span class="num">11</span> Atualizações desta política</h2>
+      <p>Esta política pode ser atualizada sempre que houver mudança nos serviços, nas ferramentas usadas, ou na legislação aplicável. A data no topo da página indica quando a versão vigente entrou em vigor.</p>
+      <p>Em caso de alterações relevantes que afetem seus direitos, você será informada pelo e-mail cadastrado no formulário de contato, se aplicável.</p>
+      <p>Ao continuar usando o site após uma atualização, você confirma que leu e aceita a versão mais recente desta política.</p>
+    </section>
+
+  </main>
+
+  <footer class="rodape" role="contentinfo">
+    <div class="rodape-inner">
+      <p class="rodape-copy">© 2026 Chayene de Souza Silva · CS. Studio · Todos os direitos reservados</p>
+      <ul class="rodape-links">
+        <li><a href="/sites-para-psicologas/">Voltar ao site</a></li>
+        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

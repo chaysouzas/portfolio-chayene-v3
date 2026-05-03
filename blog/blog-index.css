@@ -106,7 +106,7 @@
 }
 
 html.light .blog-index-card:hover {
-  border-color: rgba(0, 119, 255, 0.25);
+  border-color: rgba(14, 165, 192, 0.25);
 }
 
 /* Imagem */
@@ -170,8 +170,8 @@ html.light .blog-index-card:hover {
 }
 
 html.light .blog-index-card__categoria {
-  background: rgba(0, 119, 255, 0.08);
-  border-color: rgba(0, 119, 255, 0.18);
+  background: rgba(14, 165, 192, 0.08);
+  border-color: rgba(14, 165, 192, 0.18);
 }
 
 /* Título */

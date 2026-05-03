@@ -1,1326 +1,667 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
-      media="print" onload="this.media='all'">
-    <noscript>
-      <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
-    </noscript>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src  'self' 'unsafe-inline'
-                  https://unpkg.com
-                  https://www.googletagmanager.com
-                  https://www.google-analytics.com;
-      style-src   'self' 'unsafe-inline'
-                  https://fonts.googleapis.com;
-      font-src    'self'
-                  https://fonts.gstatic.com;
-      img-src     'self' data:
-                  https://cdn.sanity.io
-                  https://*.sanity.io
-                  https://www.google-analytics.com;
-      connect-src 'self'
-                  https://*.api.sanity.io
-                  https://unpkg.com
-                  https://www.google-analytics.com
-                  https://www.googletagmanager.com;
-      frame-src   'none';
-      object-src  'none';
-      base-uri    'self';
-      ">
-    
-    <!-- Referrer policy -->
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- X-Content-Type-Options -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chayene de Souza — Desenvolvimento Web | Colombo e Curitiba</title>
+  <meta name="description" content="Sites profissionais que aparecem no Google e atraem os clientes certos. Do código ao SEO, sem mensalidade e entregue em 15 dias úteis. Colombo e Curitiba, PR." />
+  <meta name="keywords" content="desenvolvedor de sites, criação de sites Curitiba, criação de sites Colombo, desenvolvimento web, SEO, portfólio frontend" />
+  <meta name="author" content="Chayene de Souza" />
+  <meta property="og:title" content="Chayene de Souza — Desenvolvimento Web e SEO" />
+  <meta property="og:description" content="Sites feitos pra durar, ranquear e converter. Atendimento em Colombo e Curitiba, PR." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://chaysouza.com.br/" />
 
+  <link rel="stylesheet" href="assets/styles/style.css">
 
-    <title>Chayene de Souza | Sites para Psicólogas que Querem Atrair Mais Pacientes</title>
-
-    <!-- SEO Principal -->
-    <meta name="description" content="Crio sites profissionais para psicólogas que querem ser encontradas no Google e atrair mais pacientes. Design elegante, SEO incluso e entrega rápida. Solicite seu orçamento.">
-    <meta name="keywords" content="site para psicóloga, criação de site para psicóloga, site para psicólogo, landing page para psicóloga, presença digital psicóloga, site profissional psicologia">
-    <meta name="author" content="Chayene de Souza">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.chaysouza.com.br/">
-
-    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:title" content="Sites para Psicólogas | Chayene de Souza">
-    <meta property="og:description" content="Sua próxima paciente está te procurando no Google agora. Crio sites profissionais para psicólogas com SEO incluso e entrega rápida.">
-    <meta property="og:image" content="https://www.chaysouza.com.br/assets/img/preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Chayene de Souza - Sites profissionais para psicólogas">
-    <meta property="og:url" content="https://www.chaysouza.com.br/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Chayene de Souza">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sites para Psicólogas | Chayene de Souza">
-    <meta name="twitter:description" content="Sua próxima paciente está te procurando no Google agora. Crio sites profissionais para psicólogas com SEO incluso.">
-    <meta name="twitter:image" content="https://www.chaysouza.com.br/assets/img/preview.png">
-
-    <script type="application/ld+json">
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://www.chaysouza.com.br/#person",
-        "name": "Chayene de Souza",
-        "alternateName": "Chay",
-        "jobTitle": "Desenvolvedora de Sites para Psicólogas",
-        "description": "Desenvolvedora frontend especializada em criar sites profissionais para psicólogas. Ajudo psicólogas a serem encontradas no Google, conquistar mais pacientes e ter uma presença digital que transmite confiança e credibilidade.",
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://www.chaysouza.com.br/assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba.webp",
-          "width": 800,
-          "height": 800
-        },
-        "url": "https://www.chaysouza.com.br/",
-        "sameAs": [
-          "https://www.instagram.com/chaydesouza.digital/",
-          "https://www.linkedin.com/in/chayenesouza/",
-          "https://github.com/chaysouzas"
-        ],
-        "knowsAbout": [
-          "Sites para Psicólogas",
-          "Site para Psicólogo",
-          "Landing Page para Psicóloga",
-          "Presença Digital para Profissionais de Saúde Mental",
-          "SEO para Psicólogas",
-          "Design Responsivo",
-          "Criação de Sites Profissionais"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Curitiba",
-          "addressRegion": "PR",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://www.chaysouza.com.br/#service",
-        "name": "Sites Profissionais para Psicólogas",
-        "provider": { "@id": "https://www.chaysouza.com.br/#person" },
-        "description": "Criação de sites profissionais e landing pages para psicólogas, com design elegante, SEO incluso e foco em atrair mais pacientes.",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Brasil"
-        },
-        "serviceType": [
-          "Criação de site para psicóloga",
-          "Landing page para psicóloga",
-          "SEO para psicólogas",
-          "Design responsivo para psicólogas"
-        ],
-        "url": "https://www.chaysouza.com.br/",
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "priceCurrency": "BRL",
-          "url": "https://wa.link/rh55kd"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.chaysouza.com.br/#website",
-        "url": "https://www.chaysouza.com.br/",
-        "name": "Chayene de Souza | Sites para Psicólogas",
-        "description": "Crio sites profissionais para psicólogas que querem ser encontradas no Google e atrair mais pacientes.",
-        "publisher": { "@id": "https://www.chaysouza.com.br/#person" },
-        "inLanguage": "pt-BR"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.chaysouza.com.br/#webpage",
-        "url": "https://www.chaysouza.com.br/",
-        "name": "Sites para Psicólogas | Chayene de Souza",
-        "isPartOf": { "@id": "https://www.chaysouza.com.br/#website" },
-        "about": { "@id": "https://www.chaysouza.com.br/#person" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://www.chaysouza.com.br/assets/img/preview.png"
-        },
-        "inLanguage": "pt-BR",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Início",
-              "item": "https://www.chaysouza.com.br/"
-            }
-          ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.chaysouza.com.br/#faq",
-        "isPartOf": { "@id": "https://www.chaysouza.com.br/#webpage" },
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Psicóloga precisa ter site?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. Ter um site profissional é hoje uma das formas mais eficazes de uma psicóloga ser encontrada por novas pacientes. Quando alguém pesquisa por 'psicóloga em [cidade]' no Google, os resultados orgânicos privilegiam sites com boa estrutura de SEO. Além disso, um site transmite credibilidade e permite que a futura paciente conheça sua abordagem antes mesmo do primeiro contato."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo leva para criar um site para psicóloga?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O prazo médio de entrega é de 7 a 15 dias úteis após a aprovação do briefing e do design. Projetos mais simples (landing page) costumam ser entregues em até 7 dias. Sites completos com mais seções ficam prontos em até 15 dias. Tudo depende do tempo de resposta e aprovação da cliente."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O site já vem com SEO incluso?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. Todos os sites entregues por Chayene de Souza incluem SEO técnico: título e meta description otimizados, estrutura de headings correta, schema markup para profissionais de saúde, imagens com alt text e código limpo para boa performance. O objetivo é que sua próxima paciente te encontre no Google sem precisar pagar anúncios."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Preciso saber de tecnologia para ter um site?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Não. O processo é pensado para psicólogas que não têm tempo nem interesse em lidar com tecnologia. Chayene cuida de tudo: do design à publicação, incluindo domínio e hospedagem. Após a entrega, você recebe orientações simples sobre como solicitar atualizações sem precisar aprender a programar."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Qual a diferença entre site institucional e landing page para psicóloga?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O site institucional é uma presença digital completa, com múltiplas seções: sobre você, abordagens terapêuticas, serviços, portfólio de formações e contato. É ideal para psicólogas que querem construir autoridade online. Já a landing page é uma única página focada em converter visitantes em consultas — ideal para campanhas ou para quem está começando e quer uma solução rápida e eficaz."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O site funciona bem no celular?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. Todos os projetos são desenvolvidos com design responsivo, garantindo uma experiência perfeita em celular, tablet e desktop. Isso é essencial pois a maioria das pessoas pesquisa por psicólogas usando o smartphone."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona o orçamento?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "É simples: basta entrar em contato pelo WhatsApp ou pelo formulário do site. Chayene faz uma conversa de briefing para entender suas necessidades e envia uma proposta personalizada com escopo, prazo e valor. O retorno é feito em até 24 horas."
-            }
-          }
-        ]
-      }
-    ]
+    "@type": "Person",
+    "name": "Chayene de Souza",
+    "jobTitle": "Desenvolvedora Web",
+    "url": "https://chaysouza.com.br/",
+    "image": "https://chaysouza.com.br/assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colombo",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Colombo" },
+      { "@type": "City", "name": "Curitiba" }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/chayenesouza/",
+      "https://github.com/chaysouzas",
+      "https://www.instagram.com/chayde.souza/"
+    ],
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "SEO", "Marketing Digital", "Desenvolvimento Web"]
   }
-    </script>
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YTP4M87RPT');
-    </script>
-
-    <meta name="google-site-verification" content="YW-MoETrTBkxD3aAnb8K6dv9HSCzNe0tx4ZW3YCLFMk" />
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-
-    
 </head>
+
 <body>
-      <header class="site-header">
-        <div class="header-container">
 
-          <a href="#" class="logo">CS.</a>
-
-          <nav class="nav">
-            <ul class="nav-list">
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#como-funciona">Como Funciona</a></li>
-              <li><a href="#projetos">Projetos</a></li>
-              <li><a href="#depoimento">Depoimentos</a></li>
-              <li><a href="blog/post.html">Blog</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </nav>
-
-          <div class="header-actions">
-          <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
-            <i data-lucide="moon"></i>
-          </button>
-          <button class="menu-toggle" aria-label="Abrir menu">
-            <i data-lucide="menu"></i>
-          </button>
-
-          </div>
-
-        </div>
-      </header>
-
-
-      <!-- HERO -->
-
-      <section class="hero" id="inicio" >
-      <div class="hero__content">
-        <h1 class="hero__title">
-          Sua próxima paciente está te procurando no<br>
-          <span class="hero__highlight">Google</span> agora. 
-        </h1>
-
-        <p class="hero__description">
-          <span class="hero__highlight-color">Crio sites profissionais para psicólogas que querem ser encontradas,</span> e conquistar mais pacientes, sem complicação ou termos técnicos.
-        </p>
-
-        <a 
-          href="https://forms.gle/dYFsdB4PiwjEmQW86" 
-          target="_blank" 
-          class="hero-btn"
-        >
-          <i data-lucide="message-circle"></i>
-          Solicitar orçamento
-        </a>
-
-      </div>
-      </section>
-
-      <!-- ABOUT -->
-
-      <section class="sobre" id="sobre">
-        <div class="sobre-container">
-
-          <div class="sobre-imagem">
-            <div class="imagem-wrapper">
-              <img 
-                src="assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba.webp" 
-                alt="Chayene de Souza - Desenvolvedora Frontend em Curitiba" width="800" height="800"
-                fetchpriority="high" loading="eager"
-              >
-            </div>
-          </div>
-
-          <div class="sobre-conteudo">
-            <span class="tag">Sobre mim</span>
-
-            <h2>
-              Prazer, <br>
-              <strong>sou a Chay.</strong>
-            </h2>
-
-            <p>
-              Sou desenvolvedora frontend especializada em criar sites para psicólogas.
-              Entendo que você escolheu a psicologia para ajudar pessoas — não para lidar com tecnologia.
-            </p>
-
-            <p>
-              Por isso, cuido de tudo: do design à publicação no Google. 
-              Você recebe um site profissional, que transmite confiança às suas futuras pacientes 
-              e aparece quando elas pesquisam por atendimento.
-            </p>
-
-            <p class="cta">
-              Vamos construir juntos a presença online que a sua prática merece?
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section class="servicos" id="servicos">
-          <div class="container">
-
-            <h2 class="titulo-secao">
-              Como posso te ajudar?
-            </h2>
-
-            <div class="cards">
-
-          <article class="card fade-up">
-            <div class="icone">
-              <!-- Desenvolvimento -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="4" width="18" height="14" rx="2"/>
-                <path d="M8 20h8"/>
-              </svg>
-            </div>
-            <h3>Desenvolvimento</h3>
-            <p>
-              Desenvolvo e entrego seu site completo, rápido e funcional —
-              você foca no seu negócio.
-            </p>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icone">
-              <!-- Responsivo -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="5" y="2" width="14" height="20" rx="2"/>
-                <path d="M12 18h.01"/>
-              </svg>
-            </div>
-            <h3>Design Responsivo</h3>
-            <p>
-              Experiência perfeita em qualquer tela:
-              celular, tablet ou desktop.
-            </p>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icone">
-              <!-- SEO -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 17l6-6 4 4 8-8"/>
-              </svg>
-            </div>
-            <h3>Otimização SEO</h3>
-            <p>
-              Estrutura estratégica para seu site
-              ganhar visibilidade no Google.
-            </p>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icone">
-              <!-- Hospedagem -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 12h18"/>
-                <path d="M7 16h10"/>
-                <path d="M7 8h10"/>
-              </svg>
-            </div>
-            <h3>Hospedagem</h3>
-            <p>
-              Configuração, publicação e suporte
-              para seu site ficar seguro e no ar.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-      <!-- COMO FUNCIONA -->
-      <section class="como-funciona" id="como-funciona">
-        <div class="como-funciona-container">
-
-          <span class="tag">Processo</span>
-          <h2 class="como-funciona-titulo">
-            Do primeiro contato ao<br>
-            <strong>site no ar</strong> 
-          </h2>
-
-
-          <div class="steps">
-
-            <div class="step fade-up">
-              <div class="step-number">01</div>
-              <div class="step-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-              </div>
-              <h3>Preenchimento do formulário</h3>
-              <p>Sem necessidade de reuniões demoradas. Você responde algumas perguntas simples sobre sua especialidade, sua abordagem e como prefere ser contactada. Leva menos de 5 minutos.</p>
-            </div>
-
-            <div class="step-connector" aria-hidden="true"></div>
-
-            <div class="step fade-up">
-              <div class="step-number">02</div>
-              <div class="step-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2"/>
-                  <path d="M3 9h18"/>
-                  <path d="M9 21V9"/>
-                </svg>
-              </div>
-              <h3>Criação do design</h3>
-              <p>Com base nas suas respostas, desenvolvo o design e os textos do seu site — você não precisa escrever nada do zero. Cuido de tudo para transmitir o acolhimento que sua prática merece.</p>
-            </div>
-
-            <div class="step-connector" aria-hidden="true"></div>
-
-            <div class="step fade-up">
-              <div class="step-number">03</div>
-              <div class="step-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                  <circle cx="12" cy="12" r="3"/>
-                </svg>
-              </div>
-              <h3>Revisão & Aprovação</h3>
-              <p>Te apresento o site, esse é o momento de sugerir ajustes — cores, textos, ordem das seções. <br>Só seguimos quando você estiver satisfeita.</p>
-            </div>
-
-            <div class="step-connector" aria-hidden="true"></div>
-
-            <div class="step fade-up">
-              <div class="step-number">04</div>
-              <div class="step-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M2 12h20"/>
-                  <path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
-                </svg>
-              </div>
-              <h3>Publicação</h3>
-              <p>Publico o site com domínio configurado, otimização SEO e botão de WhatsApp em destaque. Em até 14 dias úteis, suas pacientes já conseguem te encontrar online.</p>
-            </div>
-
-          </div>
-
-          <div class="como-funciona-cta">
-            <p>Pronta para dar esse passo?</p>
-            <a href="https://forms.gle/dYFsdB4PiwjEmQW86" target="_blank" class="hero-btn">
-              <i data-lucide="message-circle"></i>
-              Quero meu site
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-
-      <section class="projetos" id="projetos">
-        <div class="container">
-
-          <!-- Cabeçalho da seção -->
-          <h2 class="titulo-secao">Meus Trabalhos</h2>
-
-          <!-- ── DESTAQUE ── -->
-          <div class="projeto-destaque fade-up">
-
-            <div class="projeto-destaque__img">
-              <img
-                src="assets/img/portfolio-chayene-souza-site-psicologa-patricia-hartmann-_.webp"
-                alt="Site da Psicóloga Patrícia Hartmann — desenvolvido por Chayene de Souza"
-                fetchpriority="high" loading="eager" width="600" height="800"
-              >
-            </div>
-
-            <div class="projeto-destaque__info">
-              <span class="projeto-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-                Cliente real
-              </span>
-
-              <h3 class="projeto-destaque__titulo">Psicóloga Patrícia Hartmann</h3>
-
-              <p class="projeto-destaque__desc">
-                Site institucional completo com apresentação profissional, abordagens terapêuticas
-                e agendamento via WhatsApp. Estrutura otimizada para SEO e GEO.
-              </p>
-
-              <div class="projeto-destaque__tags">
-                <span>Design</span>
-                <span>Programação</span>
-                <span>SEO</span>
-                <span>GEO</span>
-                <span>Hospedagem</span>
-              </div>
-
-              <div class="projeto-destaque__acoes">
-                <a
-                  href="https://www.psicologapatriciahartmann.com.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-destaque btn-destaque--primary"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                  Visualizar site
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- ── TODOS OS PROJETOS ── -->
-          <div class="projetos-sub-header">
-            <h3 class="projetos-sub-titulo">Demonstrações por estilo</h3>
-
-            <!-- Filtros -->
-            <div class="projetos-filtros" role="group" aria-label="Filtrar projetos por categoria">
-              <button class="filtro-btn filtro-btn--active" data-filtro="todos" type="button">Todos</button>
-              <button class="filtro-btn" data-filtro="essencial" type="button">Essencial</button>
-              <button class="filtro-btn" data-filtro="profissional" type="button">Profissional</button>
-              <button class="filtro-btn" data-filtro="premium" type="button">Premium</button>
-            </div>
-          </div>
-
-          <!-- Grid filtrado -->
-          <div class="grid-projetos" id="gridProjetos">
-
-            <!-- ESSENCIAL -->
-
-            <article class="projeto fade-up" data-categoria="essencial">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/analise-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout essencial"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Essencial</span>
-                <h3>Layout Essencial — Anelise Scheneider</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/site-psico-anelise/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-            <article class="projeto fade-up" data-categoria="essencial">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/3-ana-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout essencial"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Essencial</span>
-                <h3>Layout Essencial — Ana Julia</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/projeto-site-dr-juliana-01/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-
-            <article class="projeto fade-up" data-categoria="essencial">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/2-premium-portfolio-chayene-souza-site-psicologa-site-simples.webp"
-                  alt="Demonstração de site para psicóloga — layout essencial Ana Freitas"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Essencial</span>
-                <h3>Layout Essencial — Ana Freitas</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/projeto-site--ana-freitas//" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <!-- PROFISSIONAL -->
-
-
-            <article class="projeto fade-up" data-categoria="profissional">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/4-ana-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout profissional Ana Julia versão 2"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Profissional</span>
-                <h3>Layout Profissional — Ana Julia v2</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/projeto-site-dr-juliana-02/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-            <article class="projeto fade-up" data-categoria="profissional">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/leticia-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout profissional Letícia Menezes"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Profissional</span>
-                <h3>Layout Profissional — Letícia Menezes </h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/psico-leticia/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-
-
-            <!-- PREMIUM -->
-
-            <article class="projeto fade-up" data-categoria="premium">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/claudia-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout profissional Ana Julia"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Premium</span>
-                <h3>Layout Premium — Claudia Alves</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/PSICO-CLAUDIA/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-            
-            <article class="projeto fade-up" data-categoria="premium">
-              <div class="projeto-img">
-                <img
-                  src="assets/img/5-ana-portfolio-chayene-souza-site-psicologa-site.webp"
-                  alt="Demonstração de site para psicóloga — layout premium Ana Freitas"
-                  fetchpriority="high" loading="eager" width="600" height="800"
-                >
-              </div>
-              <div class="projeto-info">
-                <span class="projeto-categoria">Premium</span>
-                <h3>Layout Premium — Ana Freitas</h3>
-                <div class="tags">
-                  <span>Design</span>
-                  <span>Programação</span>
-                </div>
-                <a href="https://chaysouzas.github.io/projeto-site--Ana-freitas-premium/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                  Visualizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-          </div>
-
-          <p class="projetos-vazio" id="projetosVazio" hidden>
-            Nenhum projeto nessa categoria ainda.
-          </p>
-
-        </div>
-      </section>
-
-      <!-- AVALIAÇÕES-->
-
-      <section class="depoimento" id="depoimento">
-        <div class="depoimento-container">
-      
-          <span class="tag">Depoimento</span>
-          <h2 class="depoimento-titulo">
-            O que dizem as <strong>psicólogas parceiras</strong>
-          </h2>
-      
-          <div class="depoimento-card fade-up">
-      
-            <!-- Aspas decorativas -->
-            <div class="depoimento-aspas" aria-hidden="true">
-              <svg viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 32V19.556C0 8.148 6.222 1.778 18.667 0l1.777 3.556C13.926 5.037 10.37 8.444 9.778 14.222H17.778V32H0ZM22.222 32V19.556C22.222 8.148 28.444 1.778 40.889 0l1.778 3.556C36.148 5.037 32.593 8.444 32 14.222H40V32H22.222Z" fill="currentColor"/>
-              </svg>
-            </div>
-      
-            <!-- Texto do depoimento -->
-            <blockquote class="depoimento-texto">
-              Muito paciente e atenciosa, não mede esforços para deixar o site da forma que o cliente deseja. Experiência muito legal! Espero que a parceria se mantenha por muito tempo ainda!
-            </blockquote>
-      
-            <!-- Estrelas -->
-            <div class="depoimento-estrelas" aria-label="Avaliação 5 de 5 estrelas">
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            </div>
-      
-            <!-- Autora -->
-            <div class="depoimento-autora">
-              <div class="depoimento-avatar" aria-hidden="true">PH</div>
-              <div class="depoimento-autora__info">
-                <strong>Patrícia Hartmann</strong>
-                <span>Psicóloga Clínica · CRP 08/23695</span>
-              </div>
-              <a
-                href="https://share.google/jyWVFsTM2l3bzeovt"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="depoimento-google"
-                aria-label="Ver avaliação no Google"
-                title="Ver no Google"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                </svg>
-                Google
-              </a>
-            </div>
-      
-          </div>
-      
-        </div>
-      </section>
-
-
-
-      <!-- ============================================================
-                            BLOG        
-      ============================================================ -->
-
-  <section class="blog" id="blog">
-  <div class="blog-container">
-
-    <span class="tag">Blog</span>
-    <h2 class="blog-titulo">
-      Conteúdo para <strong>psicólogas</strong>
-    </h2>
-
-    <div class="blog-header-actions">
-      <a href="blog/index.html" class="blog-ver-todos">
-        Ver todos os artigos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Estado de carregamento -->
-    <div class="blog-loading" id="blogLoading">
-      <div class="blog-loading__spinner"></div>
-      <span>Carregando artigos...</span>
-    </div>
-
-    <!-- Estado de erro -->
-    <div class="blog-erro" id="blogErro" hidden>
-      <p>Não foi possível carregar os artigos agora. Tente novamente em instantes.</p>
-    </div>
-
-    <!-- Conteúdo dinâmico -->
-    <div class="blog-conteudo" id="blogConteudo" hidden>
-
-      <!-- Card destaque (primeiro post) -->
-      <a class="blog-destaque" id="blogDestaque" href="#">
-        <div class="blog-destaque__img" id="blogDestaqueImg">
-          <div class="blog-img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <polyline points="21 15 16 10 5 21"/>
-            </svg>
-          </div>
-        </div>
-        <div class="blog-destaque__body">
-          <span class="blog-categoria" id="blogDestaqueCategoria"></span>
-          <h3 class="blog-destaque__titulo" id="blogDestaqueTitulo"></h3>
-          <p class="blog-destaque__resumo" id="blogDestaqueResumo"></p>
-          <div class="blog-meta">
-            <span class="blog-meta__item" id="blogDestaqueData">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              <span></span>
-            </span>
-            <span class="blog-meta__item" id="blogDestaqueTempo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <span></span>
-            </span>
-          </div>
-          <span class="blog-ler-btn">
-            Ler artigo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </span>
-        </div>
-      </a>
-
-      <!-- Grid dos demais posts -->
-      <div class="blog-grid" id="blogGrid"></div>
-
-    </div>
-
+<!-- Menu navegação -->
+<header id="navbar" role="banner">
+  <nav class="nav-inner" aria-label="Navegação principal">
+    <a href="#hero" class="nav-logo" aria-label="Ir para o início">CS.</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#outros">Outros</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme-btn" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-  </section>
-  
-      <!-- FAQ -->
+</header>
 
-      <section class="faq" id="faq">
-  <div class="faq-container">
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobile">
+  <a href="#sobre" class="mobile-nav-link">Sobre</a>
+  <a href="#skills" class="mobile-nav-link">Skills</a>
+  <a href="#projetos" class="mobile-nav-link">Projetos</a>
+  <a href="#outros" class="mobile-nav-link">Outros</a>
+  <a href="#depoimentos" class="mobile-nav-link">Depoimentos</a>
+  <a href="#contato" class="mobile-nav-link">Contato</a>
+</div>
 
-    <span class="tag">Dúvidas frequentes</span>
-    <h2 class="faq-titulo">
-      Antes de começar, <br>
-      <strong>você pode estar se perguntando…</strong>
-    </h2>
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero" aria-label="Introdução">
+  <div class="grid-bg"></div>
+  <div class="hero-parallax-bg" id="parallax-bg"></div>
 
-    <div class="faq-lista">
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          Psicóloga precisa ter site?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Sim. Quando alguém pesquisa por <em>"psicóloga em [cidade]"</em> no Google,
-          os resultados privilegiam sites com boa estrutura. Além disso, um site profissional
-          transmite credibilidade e permite que a futura paciente conheça sua abordagem
-          antes mesmo do primeiro contato.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          Quanto tempo leva para criar meu site?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Landing pages ficam prontas em até <strong>7 dias úteis</strong>.
-          Sites completos em até <strong>15 dias úteis</strong> após a aprovação do briefing.
-          O prazo depende do tempo de resposta e aprovação da sua parte também.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          O SEO já vem incluso?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Sim. Todo site inclui SEO técnico: título e descrição otimizados, estrutura de
-          headings correta, schema markup, imagens com alt text e código limpo para boa
-          performance. O objetivo é você ser encontrada no Google sem precisar pagar anúncios.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">   
-          Preciso entender de tecnologia?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Não. Cuido de tudo: do design à publicação, incluindo domínio e hospedagem.
-          Após a entrega, você recebe orientações simples para solicitar atualizações
-          sem precisar aprender a programar.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          Qual a diferença entre site e landing page?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          O <strong>site institucional</strong> é uma presença completa: sobre você, abordagens,
-          serviços e contato — ideal para construir autoridade. A <strong>landing page</strong>
-          é uma única página focada em converter visitas em consultas — ideal para quem está
-          começando ou quer uma solução rápida.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          O site funciona bem no celular?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Sim. Todos os projetos são desenvolvidos com <strong>design responsivo</strong>,
-          garantindo uma experiência perfeita em celular, tablet e desktop — essencial, já que
-          a maioria das pessoas pesquisa por psicólogas pelo smartphone.
-        </p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-pergunta">
-          Como funciona o orçamento?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </summary>
-        <p class="faq-resposta">
-          Entre em contato pelo WhatsApp ou pelo formulário. Fazemos uma conversa rápida
-          de briefing para entender suas necessidades e você recebe uma proposta personalizada
-          com escopo, prazo e valor. <strong>Retorno em até 24 horas.</strong>
-        </p>
-      </details>
-
-    </div>
+  <div class="hero-beams" aria-hidden="true">
+    <div class="hero-beam hero-beam-1"></div>
+    <div class="hero-beam hero-beam-2"></div>
+    <div class="hero-beam hero-beam-3"></div>
   </div>
-      </section>
 
-      <!-- CONTACT -->
+  <div class="hero-sparkles" aria-hidden="true">
+    <span class="sparkle" style="top:9%;left:7%"></span>
+    <span class="sparkle sparkle-sm" style="top:5%;right:27%"></span>
+    <span class="sparkle" style="top:20%;right:5%"></span>
+    <span class="sparkle sparkle-sm" style="top:50%;left:3%"></span>
+    <span class="sparkle" style="bottom:30%;left:16%"></span>
+    <span class="sparkle sparkle-sm" style="bottom:14%;right:36%"></span>
+    <span class="sparkle" style="top:38%;right:40%"></span>
+    <span class="sparkle sparkle-sm" style="bottom:42%;right:12%"></span>
+    <span class="sparkle" style="top:68%;left:44%"></span>
+    <span class="sparkle sparkle-sm" style="top:15%;left:38%"></span>
+  </div>
 
-      <!-- <section class="contato" id="contato">
-        <div class="contato-container">
-          
-          <h2 class="contato-titulo">Vamos criar o seu <strong>site</strong>?</h2>
-
-          <p class="contato-texto">
-            Se você ainda não tem site ou quer renovar sua presença digital,
-            me conta sobre a sua prática. Juntas, vamos criar algo que representa você
-            e atrai as pacientes certas.
-          </p>
-
-          <p class="contato-retorno">
-            Retorno em até 24 horas.
-          </p>
-
-          <div class="contato-social">
-            
-            <a href="https://wa.link/rh55kd" target="_blank" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24">
-                <path d="M20 3.9A11 11 0 0 0 3.5 18.5L3 21l2.6-.5A11 11 0 1 0 20 3.9Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </a>
-
-            <a href="https://www.instagram.com/chaydesouza.digital/" target="_blank" aria-label="Instagram">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </a>
-
-            <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="8" y1="10" x2="8" y2="16" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </a>
-
-            <a href="https://github.com/chaysouzas" target="_blank" aria-label="GitHub">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 7 9.5v-3c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8-1.3.8-1.3-.8-.1-1.7-.4-1.7-2.1 0-.5.2-1 .5-1.4-.1-.2-.4-1 .1-2 0 0 .8-.3 2.5 1a8.6 8.6 0 0 1 4.5 0c1.7-1.3 2.5-1 2.5-1 .5 1 .2 1.8.1 2 .3.4.5.9.5 1.4 0 1.7-.9 2-1.7 2.1 0 0-.2 1.4.8 1.3 0 0 .6-1 1.7-1.1 0 0 1.1 0 .1.7 0 0-.7.3-1.2 1.5 0 0-.6 1.8-3.4 1.2v3A10 10 0 0 0 22 12 10 10 0 0 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-            </a>
-
-          </div>
-
-          <a href="https://wa.link/rh55kd" target="_blank" class="contato-btn">Vamos conversar</a>
-
-        </div>
-      </section> -->
-      <section class="contato" id="contato">
-      <div class="contato-container">
- 
-        <!-- Cabeçalho -->
-        <span class="tag">Contato</span>
-        <h2 class="contato-titulo">
-          Vamos criar o seu <strong>site</strong>?
-        </h2>
-        <p class="contato-texto">
-          Se você possui conteúdo em seu Instagram, é possível agilizar o processo, escolha como prefere começar. Pode ser rápido como mandar um @,
-          ou com mais detalhes se preferir.
-        </p>
- 
-    <!-- Seletor de rota -->
-    <div class="contato-rotas" role="tablist" aria-label="Escolha como entrar em contato">
- 
-      <button
-        class="rota-btn active"
-        role="tab"
-        aria-selected="true"
-        aria-controls="rota-instagram"
-        data-rota="instagram"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-        </svg>
-        Rápido — manda seu @
-      </button>
- 
-      <button
-        class="rota-btn"
-        role="tab"
-        aria-selected="false"
-        aria-controls="rota-formulario"
-        data-rota="formulario"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="8" y1="13" x2="16" y2="13"/>
-          <line x1="8" y1="17" x2="12" y2="17"/>
-        </svg>
-        Completo — preenche o briefing
-      </button>
- 
-    </div>
- 
-    <!-- ROTA 1: Instagram -->
-    <div
-      class="contato-painel active"
-      id="rota-instagram"
-      role="tabpanel"
-      aria-labelledby="tab-instagram"
-    >
-      <p class="painel-descricao">
-        Me manda o seu @ do Instagram. Com ele consigo ver sua bio, abordagem, estilo visual
-        e já começo a pensar no seu site. <strong>Leva menos de 10 segundos.</strong>
+  <div class="hero-inner">
+    <!-- Text Side -->
+    <div class="hero-text">
+      <div class="hero-eyebrow fade-in">Desenvolvimento Web &amp; Marketing Digital</div>
+      <h1 class="hero-title fade-in delay-1">
+       <span class="highlight"></span>Do código ao Google
+      </h1>
+      <p class="hero-tagline fade-in delay-2">
+        Sites feitos pra durar, ranquear e converter. Com foco em saúde, mas sem limite de nicho.
       </p>
- 
-      <form class="instagram-form" id="instagramForm" novalidate>
-        <div class="input-wrapper">
-          <span class="input-arroba" aria-hidden="true">@</span>
-          <input
-            type="text"
-            id="instagramHandle"
-            name="instagram"
-            class="instagram-input"
-            placeholder="seu.perfil"
-            autocomplete="off"
-            autocapitalize="none"
-            spellcheck="false"
-            aria-label="Seu @ do Instagram"
-            maxlength="60"
+      <div class="hero-ctas fade-in delay-3">
+        <a href="#projetos" class="btn btn-primary">
+          <i class="fa-solid fa-eye"></i> Ver projetos
+        </a>
+        <a href="#contato" class="btn btn-outline">
+          <i class="fa-solid fa-paper-plane"></i> Falar comigo
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SOBRE
+════════════════════════════════════════ -->
+<section id="sobre" aria-label="Sobre mim">
+  <div class="section-inner">
+    <div class="sobre-grid">
+      <!-- Image -->
+      <div class="sobre-image-wrap fade-in-left">
+        <div class="sobre-image-frame">
+          <img
+            src="assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba.webp"
+            alt="Chayene de Souza, desenvolvedora web em Colombo e Curitiba, trabalhando no computador"
+            loading="lazy"
           />
         </div>
-        <button type="submit" class="contato-btn instagram-submit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M20 3.9A11 11 0 0 0 3.5 18.5L3 21l2.6-.5A11 11 0 1 0 20 3.9Z"/>
-          </svg>
-          Enviar pelo WhatsApp
-        </button>
-      </form>
- 
-      <p class="painel-nota">
-        Você será redirecionada para o WhatsApp com o @ já preenchido na mensagem.
-      </p>
+        <div class="sobre-stats">
+          <div class="stat-card fade-in delay-1">
+            <div class="stat-number">+2</div>
+            <div class="stat-label">Sites entregues</div>
+          </div>
+
+          <div class="stat-card fade-in delay-2">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Avaliações 5 estrelas</div>
+          </div>
+
+          <div class="stat-card fade-in delay-3">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Dias úteis pra entregar</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="sobre-text fade-in-right">
+        <div class="section-label">Sobre mim</div>
+        <h2 class="section-title">A pessoa por trás do código</h2>
+        <div class="glow-line"></div>
+        <p>Olá, meu nome é <strong>Chayene</strong>, sou de <strong>Colombo, PR</strong>, e trabalho com desenvolvimento web e marketing digital.</p>
+        <p>Comecei em 2018 trabalhando como suporte técnico numa plataforma de e-commerce. Foi assim que aprendi o que acontece quando um site vai ao ar sem estrutura: tráfego zero, conversão zero, cliente frustrado. Desde então, HTML, CSS e JavaScript viraram ferramentas do dia a dia, e hoje estou no último período da faculdade de <strong>Análise e Desenvolvimento de Sistemas</strong>.</p>
+        <p>Crio sites para psicólogas e profissionais de saúde, mas atendo outros nichos também. O que entrego em meus projetos é o mesmo: <strong>código limpo, SEO desde a primeira linha, e prazo respeitado</strong>.</p>
+      </div>
     </div>
- 
-    <!-- ROTA 2: Formulário / Google Forms -->
-    <div
-      class="contato-painel"
-      id="rota-formulario"
-      role="tabpanel"
-      aria-labelledby="tab-formulario"
-      hidden
-    >
-      <p class="painel-descricao">
-        Prefere detalhar mais sobre a sua prática, abordagem e o que espera do site?
-        O formulário leva cerca de 3 minutos e me ajuda a preparar uma proposta bem alinhada.
-      </p>
- 
-      <a
-        href="https://forms.gle/dYFsdB4PiwjEmQW86"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="contato-btn"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-        </svg>
-        Preencher o formulário
-      </a>
- 
-      <p class="painel-nota">
-        Retorno em até 24 horas após o envio.
-      </p>
-    </div>
- 
-    <!-- Redes sociais (mantidas abaixo das duas rotas) -->
-    <div class="contato-social">
-      <a href="https://wa.link/rh55kd" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24">
-          <path d="M20 3.9A11 11 0 0 0 3.5 18.5L3 21l2.6-.5A11 11 0 1 0 20 3.9Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-      <a href="https://www.instagram.com/chaydesouza.digital/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24">
-          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="8" y1="10" x2="8" y2="16" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
- 
   </div>
-      </section>
-      <!-- FOOTER -->
+</section>
 
-      <footer class="rodape">
-          <div class="rodape-container">
+<!-- ════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════ -->
+<section id="skills" aria-label="Habilidades">
+  <div class="section-inner">
+    <div class="skills-layout">
+      <!-- Timeline -->
+      <div>
+        <div class="section-label fade-in">Trajetória</div>
+        <h2 class="section-title fade-in delay-1">Como cheguei até aqui</h2>
+        <div class="glow-line fade-in delay-2"></div>
+        <div class="timeline">
+          <article class="timeline-item fade-in delay-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2018</div>
+            <h3 class="timeline-title">Primeiro contato com desenvolvimento</h3>
+            <p class="timeline-desc">Trabalhando como suporte técnico em uma plataforma de e-commerce, percebi na prática o que separa um site que gera resultado de um que só existe. Comecei a estudar HTML, CSS e JavaScript por conta própria.</p>
+          </article>
+          <article class="timeline-item fade-in delay-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2020</div>
+            <h3 class="timeline-title">Construindo base técnica</h3>
+            <p class="timeline-desc">Aprofundei nos fundamentos do frontend e comecei a entender como o Google lê um site. Performance, semântica e SEO entraram no radar desde cedo.</p>
+          </article>
+          <article class="timeline-item fade-in delay-3">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+            <h3 class="timeline-title">Primeiros projetos reais para clientes</h3>
+            <p class="timeline-desc">Comecei a atender profissionais de saúde, com foco em psicólogas. Cada projeto trouxe um problema novo, e a solução foi pra dentro do próximo trabalho.</p>
+          </article>
+          <article class="timeline-item fade-in delay-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024–hoje</div>
+            <h3 class="timeline-title">Últimos períodos de ADS + projetos reais</h3>
+            <p class="timeline-desc">Estou no final da graduação em Análise e Desenvolvimento de Sistemas e com dois sites no ar para clientes reais.</p>
+          </article>
+        </div>
+      </div>
 
-            <div class="rodape-brand">
-              <span class="rodape-nome">Chayene de Souza</span>
-              <p class="rodape-descricao">
-                Desenvolvo sites para psicólogas. Ajudo profissionais de psicologia
-                a serem encontradas no Google e a conquistar mais pacientes com uma presença
-                digital que transmite confiança e acolhimento.
-              </p>
-            </div>
-
-            <div class="rodape-links">
-              <a href="#sobre">Sobre</a>              
-              <a href="#servicos">Serviços</a>
-              <a href="#como-funciona">Como Funciona</a>
-              <a href="#projetos">Projetos</a>
-              <a href="blog/post.html">Blog</a>
-              <a href="#contato">Contato</a>
-            </div>
-
-            <div class="rodape-social">
-              <a href="https://wa.link/rh55kd" target="_blank" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24">
-                  <path d="M20 3.9A11 11 0 0 0 3.5 18.5L3 21l2.6-.5A11 11 0 1 0 20 3.9Z"
-                        fill="none" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-              </a>
-
-              <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="3"
-                        fill="none" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="8" y1="10" x2="8" y2="16"
-                        stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="12" y1="10" x2="12" y2="16"
-                        stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-              </a>
-
-              <a href="https://www.instagram.com/chaydesouza.digital/" target="_blank" aria-label="Instagram">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </a>
-
-              <a href="https://github.com/chaysouzas" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 7 9.5v-3c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8-1.3.8-1.3-.8-.1-1.7-.4-1.7-2.1 0-.5.2-1 .5-1.4-.1-.2-.4-1 .1-2 0 0 .8-.3 2.5 1a8.6 8.6 0 0 1 4.5 0c1.7-1.3 2.5-1 2.5-1 .5 1 .2 1.8.1 2 .3.4.5.9.5 1.4 0 1.7-.9 2-1.7 2.1 0 0-.2 1.4.8 1.3 0 0 .6-1 1.7-1.1 0 0 1.1 0 .1.7 0 0-.7.3-1.2 1.5 0 0-.6 1.8-3.4 1.2v3A10 10 0 0 0 22 12 10 10 0 0 0 12 2Z"
-                        fill="none" stroke="currentColor" stroke-width="1.2"/>
-                </svg>
-              </a>
-            </div>
-
+      <!-- Skills Grid -->
+      <div>
+        <div class="section-label fade-in">Tecnologias</div>
+        <h2 class="section-title fade-in delay-1">O que uso no dia a dia</h2>
+        <div class="glow-line fade-in delay-2"></div>
+        <div class="skills-grid">
+          <div class="skill-card fade-in delay-1">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="96"></div></div>
           </div>
-
-          <div class="rodape-copy">
-            © 2026 · Chayene de Souza · Todos os direitos reservados
+          <div class="skill-card fade-in delay-2">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-name">CSS3</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="93"></div></div>
           </div>
-      </footer>
+          <div class="skill-card fade-in delay-3">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="85"></div></div>
+          </div>
+          <!-- <div class="skill-card fade-in delay-4">
+            <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <div class="skill-name">React</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="78"></div></div>
+          </div> -->
+          <div class="skill-card fade-in delay-5">
+            <div class="skill-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="skill-name">SEO</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="90"></div></div>
+          </div>
+          <div class="skill-card fade-in delay-6">
+            <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+            <div class="skill-name">Figma</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="82"></div></div>
+          </div>
+          <!-- <div class="skill-card fade-in delay-1">
+            <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
+            <div class="skill-name">WordPress</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="88"></div></div>
+          </div> -->
+
+          <div class="skill-card fade-in delay-3">
+            <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="skill-name">Git</div>
+            <div class="skill-level"><div class="skill-level-bar" data-level="80"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROJETOS REAIS
+════════════════════════════════════════ -->
+<section id="projetos" aria-label="Projetos reais">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label fade-in">Projetos</div>
+      <h2 class="section-title fade-in delay-1">Trabalhos que já rolaram</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Featured Project — Aline Oliveira -->
+      <article class="project-card featured fade-in" data-img="assets/img/portfolio-psicologa-aline-site.jpg" data-caption="Site da Psi. Aline Oliveira da Encarnação">
+        <div class="project-image">
+          <img src="assets/img/portfolio-psicologa-aline-site.jpg" alt="Site da psicóloga Aline Oliveira da Encarnação" loading="lazy" />
+          <div class="project-overlay">
+            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">DESIGN</span>
+            <span class="tag">SEO</span>
+            <span class="tag accent">Cliente real</span>
+          </div>
+          <h3 class="project-title">Psi. Aline Oliveira da Encarnação</h3>
+          <p class="project-desc">O desafio foi criar uma identidade visual do zero junto com a cliente, alinhando tom de voz e paleta com o perfil de atendimento dela. Site leve, rápido e com estrutura de SEO local para aparecer nas buscas da região. A Aline queria algo que transmitisse acolhimento desde o primeiro scroll — e é exatamente isso que entregamos.</p>
+          <div class="project-links">
+            <a href="https://www.psicologaalineoliiveira.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Patrícia Hartmann -->
+      <article class="project-card fade-in delay-1" data-caption="Site da Psi. Patrícia Hartmann">
+        <div class="project-image">
+          <img src="assets/img/portfolio-chayene-souza-site-psicologa-patricia-hartmann-_.webp" alt="Site da psicóloga Patrícia Hartmann" loading="lazy" />
+          <div class="project-overlay">
+            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">DESIGN</span>
+            <span class="tag">SEO</span>
+            <span class="tag accent">Cliente real</span>
+          </div>
+          <h3 class="project-title">Psi. Patrícia Hartmann</h3>
+          <p class="project-desc">Site desenvolvido do zero: identidade visual, copy, SEO on-page, contato e mapa integrado com o Google. O site teve algumas versões e só foi pro ar quando ficou do jeito que a Patrícia queria: profissional, acolhedor e encontrável no Google.</p>
+          <div class="project-links">
+            <a href="https://www.psicologapatriciahartmann.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Anelise Schneider (demo) -->
+      <article class="project-card fade-in delay-2" data-caption="Demonstrativo Psi. Anelise Schneider">
+        <div class="project-image">
+          <img src="assets/img/analise-portfolio-chayene-souza-site-psicologa-site.webp" alt="Site demonstrativo Psi. Anelise Schneider" loading="lazy" />
+          <div class="project-overlay">
+            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">Demonstrativo</span>
+          </div>
+          <h3 class="project-title">Psi. Anelise Schneider — Demonstrativo</h3>
+          <p class="project-desc">Demonstrativo desenvolvido para mostrar o tipo de entrega que faço. Layout profissional, tipografia cuidada, copy voltada pra conversão e otimização básica de SEO.</p>
+          <div class="project-links">
+            <a href="https://chaysouzas.github.io/site-psico-anelise/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Claudia Alves (demo) -->
+      <article class="project-card fade-in delay-3" data-caption="Demonstrativo Psi. Claudia Alves">
+        <div class="project-image">
+          <img src="assets/img/claudia-portfolio-chayene-souza-site-psicologa-site.webp" alt="Site demonstrativo Psi. Claudia Alves" loading="lazy" />
+          <div class="project-overlay">
+            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">Demonstrativo</span>
+          </div>
+          <h3 class="project-title">Psi. Claudia Alves — Demonstrativo</h3>
+          <p class="project-desc">Primeiro modelo demonstrativo que criei. Serviu como laboratório para desenvolver a estrutura que uso nos projetos reais: seções bem definidas, acordeão de FAQ, animações por IntersectionObserver e menu mobile responsivo.</p>
+          <div class="project-links">
+            <a href="https://chaysouzas.github.io/PSICO-CLAUDIA/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Saúde Mental Em Foco -->
+      <article class="project-card fade-in delay-1" data-caption="Saúde Mental Em Foco">
+        <div class="project-image">
+          <img src="assets/img/saude-mental-em-foco-portfolio.png" alt="Site Saúde Mental Em Foco — projeto de faculdade" loading="lazy" />
+          <div class="project-overlay">
+            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">Faculdade</span>
+          </div>
+          <h3 class="project-title">Saúde Mental Em Foco</h3>
+          <p class="project-desc">Projeto desenvolvido para a faculdade com um propósito real: reunir recursos de saúde mental, e disponibilizar informações sobre atendimento gratuito, ou com valor social em Curitiba.</p>
+          <div class="project-links">
+            <a href="https://saude-mental-em-foco-v3.vercel.app/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OUTROS PROJETOS
+════════════════════════════════════════ -->
+<section id="outros" aria-label="Outros projetos">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label fade-in">+ projetos</div>
+      <h2 class="section-title fade-in delay-1">Outros que valem mencionar</h2>
+      <p class="section-desc fade-in delay-2">Em breve, novos projetos chegam aqui.</p>
+    </div>
+
+    <div class="outros-grid">
+      <article class="mini-card fade-in delay-1">
+        <div class="mini-card-header">
+          <div class="mini-card-icon"><i class="fa-solid fa-code"></i></div>
+        </div>
+        <h3 class="mini-card-title">Em breve</h3>
+        <p class="mini-card-desc">Próximo projeto em desenvolvimento.</p>
+      </article>
+
+      <article class="mini-card fade-in delay-2">
+        <div class="mini-card-header">
+          <div class="mini-card-icon"><i class="fa-solid fa-code"></i></div>
+        </div>
+        <h3 class="mini-card-title">Em breve</h3>
+        <p class="mini-card-desc">Próximo projeto em desenvolvimento.</p>
+      </article>
+
+      <article class="mini-card fade-in delay-3">
+        <div class="mini-card-header">
+          <div class="mini-card-icon"><i class="fa-solid fa-code"></i></div>
+        </div>
+        <h3 class="mini-card-title">Em breve</h3>
+        <p class="mini-card-desc">Próximo projeto em desenvolvimento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     DEPOIMENTOS
+════════════════════════════════════════ -->
+<section id="depoimentos" aria-label="Depoimentos">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label fade-in">Depoimentos</div>
+      <h2 class="section-title fade-in delay-1">O que dizem os clientes</h2>
+    </div>
+
+    <div class="depoimentos-grid">
+
+      <div class="depoimento-card fade-in delay-1">
+        <div class="depoimento-aspas" aria-hidden="true">
+          <svg viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 32V19.556C0 8.148 6.222 1.778 18.667 0l1.777 3.556C13.926 5.037 10.37 8.444 9.778 14.222H17.778V32H0ZM22.222 32V19.556C22.222 8.148 28.444 1.778 40.889 0l1.778 3.556C36.148 5.037 32.593 8.444 32 14.222H40V32H22.222Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <blockquote class="depoimento-texto">
+          Muito paciente e atenciosa, não mede esforços para deixar o site da forma que o cliente deseja. Experiência muito legal! Espero que a parceria se mantenha por muito tempo ainda!
+        </blockquote>
+        <div class="depoimento-estrelas" aria-label="Avaliação 5 de 5 estrelas">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="depoimento-autora">
+          <div class="depoimento-avatar" aria-hidden="true">PH</div>
+          <div class="depoimento-autora__info">
+            <strong>Patrícia Hartmann</strong>
+            <span>Psicóloga Clínica · CRP 08/23695</span>
+          </div>
+          <a href="https://share.google/jyWVFsTM2l3bzeovt" target="_blank" rel="noopener noreferrer" class="depoimento-google" aria-label="Ver avaliação no Google">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            Google
+          </a>
+        </div>
+      </div>
+
+      <div class="depoimento-card fade-in delay-2">
+        <div class="depoimento-aspas" aria-hidden="true">
+          <svg viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 32V19.556C0 8.148 6.222 1.778 18.667 0l1.777 3.556C13.926 5.037 10.37 8.444 9.778 14.222H17.778V32H0ZM22.222 32V19.556C22.222 8.148 28.444 1.778 40.889 0l1.778 3.556C36.148 5.037 32.593 8.444 32 14.222H40V32H22.222Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <blockquote class="depoimento-texto">
+          A Chay é um encanto de pessoa e uma profissional muito excelente. Atenciosa nos detalhes, sempre preocupada se eu estava gostando ou não, me dando sugestões. Foi um trabalho muito bem construído.
+        </blockquote>
+        <div class="depoimento-estrelas" aria-label="Avaliação 5 de 5 estrelas">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="depoimento-autora">
+          <div class="depoimento-avatar" aria-hidden="true">AO</div>
+          <div class="depoimento-autora__info">
+            <strong>Aline Oliveira da Encarnação</strong>
+            <span>Psicóloga · CRP 05/80884</span>
+          </div>
+          <a href="https://www.google.com/search?kgmid=/g/11n9qbs_j0&q=Chayene+de+Souza+%7C+Digital" target="_blank" rel="noopener noreferrer" class="depoimento-google" aria-label="Ver avaliação no Google">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            Google
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CONTATO
+════════════════════════════════════════ -->
+<section id="contato" aria-label="Contato">
+  <div class="section-inner">
+    <div class="contato-grid">
+      <!-- Info -->
+      <div class="contato-info fade-in-left">
+        <div class="section-label">Contato</div>
+        <h2 class="section-title">Vamos construir algo juntos?</h2>
+        <div class="glow-line"></div>
+        <p>Tem um projeto em mente ou ainda está na fase de "será que preciso mesmo de um site?" Me manda uma mensagem. Respondo em até 24 horas.</p>
+
+        <div class="contato-items">
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contato-item-text">
+              <strong>E-mail</strong>
+              <span>web.chaysouza@gmail.com</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contato-item-text">
+              <strong>WhatsApp</strong>
+              <span>+55 (41) 99759-6312</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contato-item-text">
+              <strong>Localização</strong>
+              <span>Curitiba, PR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-socials" style="margin-top: 8px;">
+          <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/chaysouzas" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form fade-in-right">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+            </div>
+          </div>
+          <!-- <div class="form-group">
+            <label for="tipo">Tipo de projeto</label>
+            <select id="tipo" name="tipo">
+              <option value="">Selecione o tipo de projeto</option>
+              <option value="site">Site institucional</option>
+              <option value="loja">Loja virtual / E-commerce</option>
+              <option value="landing">Landing page</option>
+              <option value="blog">Blog / Portal de conteúdo</option>
+              <option value="app">Aplicação web</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div> -->
+          <div class="form-group">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Me conta um pouco sobre seu projeto, prazo e orçamento..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar mensagem
+          </button>
+        </form>
+        <div class="form-success" id="form-success">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Mensagem enviada!</h3>
+          <p>Obrigada pelo contato. Retorno em até 24 horas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-copy">
+      © 2025 <span>Chayene de Souza</span>. Todos os direitos reservados.
+    </p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/chaysouzas" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+
+      <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     BACK TO TOP
+════════════════════════════════════════ -->
+<a
+  id="whatsapp-float"
+  href="https://wa.me/5541997596312?text=Ol%C3%A1%2C%20vim%20pelo%20site%2C%20gostaria%20de%20um%20or%C3%A7amento."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar pelo WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<button id="back-to-top" aria-label="Voltar ao topo">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script src="assets/main.js" defer></script>
 
 
-      <!-- Botão flutuante do WhatsApp -->
-       <a 
-          href="https://wa.link/rh55kd" 
-          class="whatsapp-float" 
-          target="_blank"
-          aria-label="Falar no WhatsApp"
-        >
-          <i data-lucide="message-circle-more"></i>  
-      </a>
-
-
-      <!--Scripts  -->
-
-    <script src="https://unpkg.com/lucide@latest" defer></script>  
-    <script src="assets/main.js" defer></script> 
 </body>
 </html>

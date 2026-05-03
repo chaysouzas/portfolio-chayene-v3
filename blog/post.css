@@ -109,8 +109,8 @@
 }
 
 html.light .post-categoria {
-  background: rgba(0, 119, 255, 0.08);
-  border-color: rgba(0, 119, 255, 0.2);
+  background: rgba(14, 165, 192, 0.08);
+  border-color: rgba(14, 165, 192, 0.2);
 }
 
 .post-titulo {
@@ -226,7 +226,7 @@ html.light .post-categoria {
 }
 
 html.light .post-conteudo blockquote {
-  background: rgba(0, 119, 255, 0.04);
+  background: rgba(14, 165, 192, 0.04);
 }
 
 .post-conteudo ul,

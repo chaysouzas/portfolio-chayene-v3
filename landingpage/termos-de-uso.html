@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso | CS.</title>
+  <meta name="description" content="Termos e condições de uso do site e dos serviços da CS. Studio.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://chaysouza.com.br/sites-para-psicologas/termos-de-uso.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cor-fundo:       #f5fafa;
+      --cor-superficie:  #ffffff;
+      --cor-borda:       #daeaea;
+      --cor-primaria:    #0f3a3a;
+      --cor-acento:      #1a7a6e;
+      --cor-acento-soft: #e6f4f1;
+      --cor-texto:       #1a2a2a;
+      --cor-texto-suave: #4a6060;
+      --cor-texto-util:  #6a8080;
+      --fonte: 'Outfit', system-ui, sans-serif;
+      --raio: 10px;
+      --max: 760px;
+      --espaco: clamp(1rem, 4vw, 2rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fonte);
+      background: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+    a { color: var(--cor-acento); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--cor-primaria); }
+
+    .cabecalho {
+      background: var(--cor-primaria);
+      padding: 1.1rem var(--espaco);
+    }
+    .cabecalho-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .cabecalho-voltar {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .cabecalho-voltar:hover { color: #ffffff; }
+
+    .hero-legal {
+      background: var(--cor-primaria);
+      padding: clamp(2.5rem, 6vw, 4rem) var(--espaco) clamp(2rem, 5vw, 3rem);
+      border-bottom: 3px solid var(--cor-acento);
+    }
+    .hero-legal-inner { max-width: var(--max); margin-inline: auto; }
+    .hero-legal-rotulo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cor-acento);
+      background: rgba(26,122,110,0.15);
+      padding: 0.35rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+    .hero-legal h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .hero-legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1.4rem;
+    }
+    .hero-legal-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .hero-legal-meta-item strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    .pagina-legal {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding: clamp(2rem, 5vw, 3.5rem) var(--espaco) 4rem;
+    }
+
+    .sumario {
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-left: 4px solid var(--cor-acento);
+      border-radius: var(--raio);
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .sumario-titulo {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cor-texto-util);
+      margin-bottom: 0.9rem;
+    }
+    .sumario ol { list-style: decimal; padding-left: 1.2rem; display: grid; gap: 0.3rem; }
+    .sumario ol li a {
+      font-size: 0.9rem;
+      color: var(--cor-acento);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sumario ol li a:hover { text-decoration: underline; }
+
+    .card-destaque {
+      background: var(--cor-acento-soft);
+      border: 1px solid #b8ddd8;
+      border-radius: var(--raio);
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .card-destaque p { font-size: 0.9rem; color: var(--cor-primaria); margin-bottom: 0; }
+
+    .secao-legal {
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+    .secao-legal h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--cor-primaria);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--cor-borda);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .secao-legal h2 .num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cor-acento);
+      background: var(--cor-acento-soft);
+      padding: 0.2rem 0.55rem;
+      border-radius: 50px;
+      flex-shrink: 0;
+    }
+    .secao-legal p { font-size: 0.95rem; color: var(--cor-texto-suave); margin-bottom: 0.85rem; line-height: 1.8; }
+    .secao-legal p:last-child { margin-bottom: 0; }
+    .secao-legal ul { padding-left: 1.3rem; margin-bottom: 0.85rem; }
+    .secao-legal li { font-size: 0.95rem; color: var(--cor-texto-suave); margin-bottom: 0.35rem; line-height: 1.7; }
+    .secao-legal strong { color: var(--cor-texto); font-weight: 600; }
+
+    .card-contato {
+      background: var(--cor-primaria);
+      border-radius: var(--raio);
+      padding: 1.5rem 1.6rem;
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-contato-info { flex: 1; min-width: 180px; }
+    .card-contato-rotulo { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cor-acento); margin-bottom: 0.4rem; }
+    .card-contato-nome { font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem; }
+    .card-contato-sub { font-size: 0.83rem; color: rgba(255,255,255,0.6); }
+    .card-contato-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--cor-acento);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .card-contato-link:hover { background: #15635a; color: #ffffff; }
+
+    .rodape { background: var(--cor-primaria); padding: 1.8rem var(--espaco); }
+    .rodape-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .rodape-copy { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .rodape-links { display: flex; gap: 1.2rem; list-style: none; }
+    .rodape-links a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; }
+    .rodape-links a:hover { color: #ffffff; }
+
+    @media (max-width: 600px) {
+      .card-contato { flex-direction: column; }
+      .hero-legal-meta { flex-direction: column; gap: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-inner">
+      <a href="index.html" class="logo" aria-label="CS. Studio — Página inicial">cs.</a>
+      <a href="index.html" aria-label="Voltar para a página principal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Voltar ao site
+      </a>
+    </div>
+  </header>
+
+  <div class="hero-legal" role="banner">
+    <div class="hero-legal-inner">
+      <div class="hero-legal-rotulo">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+        </svg>
+        Documento legal
+      </div>
+      <h1>Termos de Uso</h1>
+      <div class="hero-legal-meta">
+        <span class="hero-legal-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <strong>Última atualização:</strong>&nbsp;01 de maio de 2026
+        </span>
+        <span class="hero-legal-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Leitura em aproximadamente 4 minutos
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <main class="pagina-legal">
+
+    <nav class="sumario" aria-label="Sumário dos termos">
+      <p class="sumario-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#aceitacao">Aceitação dos termos</a></li>
+        <li><a href="#servicos">Sobre os serviços</a></li>
+        <li><a href="#uso-aceitavel">Uso aceitável do site</a></li>
+        <li><a href="#propriedade">Propriedade intelectual</a></li>
+        <li><a href="#links">Links externos</a></li>
+        <li><a href="#responsabilidade">Responsabilidade</a></li>
+        <li><a href="#contrato">Contratos de serviço</a></li>
+        <li><a href="#lei">Lei aplicável e foro</a></li>
+        <li><a href="#contato-termos">Contato</a></li>
+      </ol>
+    </nav>
+
+    <div class="card-destaque">
+      <p>Estes termos estabelecem as regras de uso do site da CS. Studio e dos serviços prestados. A linguagem é direta — sem burocracia. Qualquer dúvida, é só me escrever.</p>
+    </div>
+
+    <!-- 1 -->
+    <section class="secao-legal" id="aceitacao">
+      <h2><span class="num">01</span> Aceitação dos termos</h2>
+      <p>Ao acessar e navegar neste site, você concorda com estes Termos de Uso. Se não concordar com algum ponto, basta não usar o site ou entrar em contato antes de contratar qualquer serviço.</p>
+      <p>Estes termos se aplicam ao site hospedado em <strong>chaysouza.com.br/sites-para-psicologas</strong> e a qualquer subpágina associada.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="secao-legal" id="servicos">
+      <h2><span class="num">02</span> Sobre os serviços</h2>
+      <p>A CS. Studio é um estúdio de desenvolvimento web especializado em sites para psicólogas, operado por <strong>Chayene de Souza Silva</strong>, baseada em Curitiba, Paraná.</p>
+      <p>Os serviços incluem: criação de sites HTML/CSS/JS sob medida, configuração de hospedagem e domínio, otimização SEO e GEO, e suporte pós-entrega (conforme o plano contratado).</p>
+      <p>Informações de preço, prazo e escopo exibidas neste site são orientativas. Os valores e condições definitivos são sempre formalizados em proposta escrita antes do início do trabalho.</p>
+    </section>
+
+    <!-- 3 -->
+    <section class="secao-legal" id="uso-aceitavel">
+      <h2><span class="num">03</span> Uso aceitável do site</h2>
+      <p>Você pode usar este site para se informar sobre os serviços, entrar em contato e contratar. O que não é permitido:</p>
+      <ul>
+        <li>Copiar, reproduzir ou distribuir textos, imagens ou o código-fonte do site sem autorização por escrito.</li>
+        <li>Usar o site para enviar spam, conteúdo enganoso ou mensagens de assédio.</li>
+        <li>Tentar acessar partes restritas do site ou interferir no funcionamento dos servidores.</li>
+        <li>Usar o conteúdo do site para criar materiais que concorram diretamente com os serviços oferecidos.</li>
+        <li>Atribuir publicamente a mim (Chayene de Souza Silva) declarações, posições ou conteúdos que não produzí.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="secao-legal" id="propriedade">
+      <h2><span class="num">04</span> Propriedade intelectual</h2>
+      <p>Todo o conteúdo deste site — textos, design, código, logotipo, imagens e demais elementos — é de propriedade de Chayene de Souza Silva ou foi licenciado para uso pela CS. Studio.</p>
+      <p>Em relação aos sites entregues a clientes: após o pagamento integral, a cliente recebe os arquivos do projeto e pode usá-los livremente. O código pode ser modificado por terceiros, mas não pode ser revendido como template ou produto próprio sem autorização.</p>
+      <p>Depoimentos publicados neste site foram cedidos pelas clientes e são usados com finalidade exclusivamente comercial e informativa. As autoras conservam todos os direitos sobre suas palavras.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="secao-legal" id="links">
+      <h2><span class="num">05</span> Links externos</h2>
+      <p>Este site pode conter links para sites de terceiros (Instagram, GitHub, sites de clientes). Esses links são fornecidos apenas para referência. Não me responsabilizo pelo conteúdo, privacidade ou práticas de sites externos.</p>
+      <p>Ao clicar em um link externo, você sai do site da CS. Studio e fica sujeito às políticas do destino.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="secao-legal" id="responsabilidade">
+      <h2><span class="num">06</span> Responsabilidade</h2>
+      <p>O site é oferecido "no estado em que se encontra". Faço o possível para mantê-lo atualizado e funcionando, mas não garanto disponibilidade ininterrupta nem ausência de erros.</p>
+      <p>Não me responsabilizo por:</p>
+      <ul>
+        <li>Perdas indiretas decorrentes do uso ou impossibilidade de uso do site.</li>
+        <li>Decisões tomadas com base nas informações aqui publicadas sem consulta prévia.</li>
+        <li>Falhas em serviços de terceiros (hospedagem, WhatsApp, Google) que afetem o funcionamento do site.</li>
+      </ul>
+      <p>Em relação aos serviços contratados, a responsabilidade da CS. Studio se limita ao escopo formal acordado na proposta e não inclui resultados de negócio (número de pacientes, faturamento, posicionamento orgânico garantido no Google).</p>
+    </section>
+
+    <!-- 7 -->
+    <section class="secao-legal" id="contrato">
+      <h2><span class="num">07</span> Contratos de serviço</h2>
+      <p>A relação comercial entre a CS. Studio e seus clientes é regida por proposta escrita enviada por e-mail ou WhatsApp, que detalha escopo, prazo, valor e condições de pagamento.</p>
+      <p>O início do trabalho está condicionado ao pagamento do sinal acordado na proposta. A entrega final ocorre após o pagamento integral.</p>
+      <p>Revisões além das incluídas no plano escolhido estão sujeitas a cobrança adicional, informada previamente.</p>
+      <p>Em caso de cancelamento pela cliente após o início do trabalho, o sinal não é devolvido. Em caso de cancelamento da minha parte antes da entrega, o sinal é devolvido integralmente.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="secao-legal" id="lei">
+      <h2><span class="num">08</span> Lei aplicável e foro</h2>
+      <p>Estes termos são regidos pelas leis brasileiras, em especial o Código Civil (Lei 10.406/2002), o Código de Defesa do Consumidor (Lei 8.078/1990) e a LGPD (Lei 13.709/2018).</p>
+      <p>Eventuais conflitos serão resolvidos, preferencialmente, por negociação direta. Se não for possível, o foro competente é o da comarca de <strong>Curitiba, Paraná</strong>.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="secao-legal" id="contato-termos">
+      <h2><span class="num">09</span> Contato</h2>
+      <p>Dúvidas sobre estes termos ou sobre os serviços, entre em contato:</p>
+      <div class="card-contato">
+        <div class="card-contato-info">
+          <div class="card-contato-rotulo">CS. Studio</div>
+          <div class="card-contato-nome">Chayene de Souza Silva</div>
+          <div class="card-contato-sub">Curitiba, PR · Atendimento em todo o Brasil</div>
+        </div>
+        <a href="mailto:web.chaysouza@gmail.com" class="card-contato-link" aria-label="Enviar e-mail para a CS. Studio">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          web.chaysouza@gmail.com
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape" role="contentinfo">
+    <div class="rodape-inner">
+      <p class="rodape-copy">© 2026 Chayene de Souza Silva · CS. Studio · Todos os direitos reservados</p>
+      <ul class="rodape-links">
+        <li><a href="/sites-para-psicologas/">Voltar ao site</a></li>
+        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
