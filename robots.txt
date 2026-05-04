@@ -1,5 +1,5 @@
 # robots.txt — chaysouza.com.br
-# Atualizado: 2026
+# Atualizado: 2026-05-04
 
 # ── Regras gerais para todos os bots ──────────────────────
 User-agent: *
@@ -7,6 +7,7 @@ User-agent: *
 # Permite indexação das páginas principais
 Allow: /$
 Allow: /index.html
+Allow: /landingpage/
 Allow: /blog/$
 Allow: /blog/index.html
 

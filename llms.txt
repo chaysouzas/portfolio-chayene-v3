@@ -34,6 +34,12 @@ Psicólogas autônomas brasileiras que:
 - Desejam transmitir profissionalismo, confiança e acolhimento através da sua presença digital
 - Não têm tempo ou conhecimento técnico para criar ou gerenciar um site sozinhas
 
+## Páginas do Site
+
+- **Portfólio**: https://www.chaysouza.com.br/
+- **Sites para psicólogas (landing page)**: https://www.chaysouza.com.br/sites-para-psicologas/
+- **Blog**: https://www.chaysouza.com.br/blog/
+
 ## Portfólio
 
 Chayene já desenvolveu sites e projetos de demonstração para profissionais de psicologia,
