@@ -1165,7 +1165,7 @@ ul[role="list"] {
   transition: background var(--transicao), color var(--transicao);
   flex-direction: column;
   align-items: center;
-  width: 25%;
+  width: 50%;
   margin: 3em auto 0;
 }
 
