@@ -94,7 +94,7 @@ function inicializarFormulario() {
 
     const linhaInstagram = instagram ? `\nInstagram: ${instagram}` : '';
     const mensagem = `Olá! Me chamo *${nome}*.\nMeu WhatsApp: ${whatsapp}${linhaInstagram}\nMeu principal desafio: ${desafio}\n\nGostaria de solicitar um diagnóstico gratuito!`;
-    const url = `https://wa.me/5541992866626?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://wa.me/5541997596312?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url, '_blank', 'noopener,noreferrer');
   });
