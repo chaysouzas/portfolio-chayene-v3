@@ -1366,7 +1366,7 @@
 
     .depoimentos-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
@@ -1374,7 +1374,7 @@
       background: var(--card-bg);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius);
-      padding: 40px;
+      padding: 32px;
       position: relative;
       transition: border-color var(--transition);
       display: flex;
@@ -1472,6 +1472,58 @@
       color: var(--primary);
     }
 
+    /* Carousel controls */
+    .carousel-controls {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--glass-border);
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: border-color var(--transition), color var(--transition);
+      flex-shrink: 0;
+    }
+
+    .carousel-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: var(--glass-border);
+      cursor: pointer;
+      padding: 0;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .carousel-dot.active {
+      background: var(--primary);
+      transform: scale(1.4);
+    }
+
     /* ──────────────────────────────────────────────
        RESPONSIVE
     ────────────────────────────────────────────── */
@@ -1503,7 +1555,16 @@
       .project-card.featured .project-image { height: 220px; }
 
       .outros-grid { grid-template-columns: repeat(2, 1fr); }
-      .depoimentos-grid { grid-template-columns: 1fr; }
+
+      .depoimentos-carousel { overflow: hidden; }
+      .depoimentos-grid {
+        display: flex;
+        gap: 0;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .depoimento-card { flex: 0 0 100%; min-width: 100%; padding: 28px 24px; }
+      .carousel-controls { display: flex; }
 
       .contato-grid { grid-template-columns: 1fr; gap: 48px; }
 
