@@ -202,12 +202,7 @@
   const totalCards = document.querySelectorAll('.depoimento-card').length;
   let currentSlide = 0;
 
-  function isCarouselMode() {
-    return window.innerWidth <= 900;
-  }
-
   function goToSlide(index) {
-    if (!isCarouselMode()) return;
     currentSlide = (index + totalCards) % totalCards;
     carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
     carouselDots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
@@ -222,14 +217,6 @@
   carouselTrack.addEventListener('touchend', e => {
     const diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) goToSlide(currentSlide + (diff > 0 ? 1 : -1));
-  }, { passive: true });
-
-  window.addEventListener('resize', () => {
-    if (!isCarouselMode()) {
-      carouselTrack.style.transform = '';
-      currentSlide = 0;
-      carouselDots.forEach((d, i) => d.classList.toggle('active', i === 0));
-    }
   }, { passive: true });
 
   /* ── Smooth scroll for all anchor links ── */

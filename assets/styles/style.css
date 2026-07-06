@@ -1364,10 +1364,13 @@
     ────────────────────────────────────────────── */
     #depoimentos { background: var(--bg2); }
 
+    .depoimentos-carousel { overflow: hidden; }
+
     .depoimentos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      display: flex;
+      gap: 0;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
     }
 
     .depoimento-card {
@@ -1379,6 +1382,8 @@
       transition: border-color var(--transition);
       display: flex;
       flex-direction: column;
+      flex: 0 0 100%;
+      min-width: 100%;
     }
 
     .depoimento-card:hover { border-color: rgba(92,223,242,0.3); }
@@ -1474,7 +1479,7 @@
 
     /* Carousel controls */
     .carousel-controls {
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 14px;
@@ -1556,15 +1561,7 @@
 
       .outros-grid { grid-template-columns: repeat(2, 1fr); }
 
-      .depoimentos-carousel { overflow: hidden; }
-      .depoimentos-grid {
-        display: flex;
-        gap: 0;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        will-change: transform;
-      }
-      .depoimento-card { flex: 0 0 100%; min-width: 100%; padding: 28px 24px; }
-      .carousel-controls { display: flex; }
+      .depoimento-card { padding: 28px 24px; }
 
       .contato-grid { grid-template-columns: 1fr; gap: 48px; }
 
