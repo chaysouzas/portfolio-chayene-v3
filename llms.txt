@@ -1,83 +1,93 @@
-# Chayene de Souza — Sites Profissionais para Psicólogas
+# Chayene de Souza — Desenvolvimento Web e SEO
 
-> Desenvolvedora frontend brasileira especializada em criar sites profissionais para psicólogas.
-> Ajudo psicólogas a serem encontradas no Google, transmitir confiança às futuras pacientes e
-> conquistar mais agendamentos através de uma presença digital estratégica.
+> Desenvolvedora frontend brasileira que cria sites profissionais para pequenos negócios,
+> profissionais autônomos e profissionais de saúde (com destaque para psicólogas). Sites
+> feitos para durar, ranquear no Google e converter visitantes em clientes.
 
 ## Quem é Chayene de Souza
 
-Chayene de Souza, conhecida como Chay, é desenvolvedora frontend com foco exclusivo no nicho
-de psicologia. Atua de forma remota atendendo psicólogas em todo o Brasil, com base em
-Curitiba, Paraná.
+Chayene de Souza, conhecida como Chay, é desenvolvedora frontend e atua com desenvolvimento
+web e marketing digital. Atua de forma remota, com base em Colombo e Curitiba, Paraná,
+atendendo clientes em todo o Brasil.
 
-Seu diferencial é unir design acolhedor, código limpo e SEO técnico em sites pensados
-especificamente para a realidade de psicólogas autônomas: profissionais que precisam de
-presença digital confiável, mas que não têm tempo nem interesse em lidar com tecnologia.
+Seu diferencial é unir design acolhedor, código limpo e SEO técnico desde a primeira linha
+de código, entregando sites pensados para quem precisa de presença digital confiável, mas
+não tem tempo nem conhecimento técnico para criar ou gerenciar um site sozinho.
+
+Embora atenda pequenos negócios e autônomos de diversos nichos, tem um histórico forte com
+profissionais de saúde — principalmente psicólogas — e conhece as particularidades desse
+mercado (linguagem de acolhimento, ética profissional, SEO local).
 
 ## Serviços Oferecidos
 
-- **Site institucional para psicóloga**: Página completa com apresentação profissional,
-  abordagens terapêuticas, informações de contato e agendamento.
-- **Landing page para psicóloga**: Página de conversão focada em um único objetivo —
-  fazer a visitante entrar em contato ou agendar uma consulta.
-- **SEO para psicólogas**: Estrutura técnica, palavras-chave e schema markup para que
-  o site apareça quando pacientes pesquisam por psicólogas na região.
-- **Design responsivo**: Experiência impecável em celular, tablet e desktop.
+- **Site institucional**: Página completa com apresentação profissional, serviços,
+  informações de contato e agendamento.
+- **Landing page**: Página de conversão focada em um único objetivo — fazer a visitante
+  entrar em contato, agendar ou comprar.
+- **SEO on-page**: Estrutura técnica, palavras-chave e schema markup para o site aparecer
+  nas buscas certas para o público certo.
+- **Design responsivo**: Experiência consistente em celular, tablet e desktop.
 - **Hospedagem e publicação**: Configuração completa para o site ir ao ar com domínio próprio.
 - **Suporte pós-entrega**: Acompanhamento após a publicação do site.
 
+Entrega em até 15 dias úteis, sem mensalidade.
+
 ## Público-Alvo
 
-Psicólogas autônomas brasileiras que:
-- Ainda não têm site ou têm um site desatualizado
-- Querem ser encontradas no Google por pacientes da sua cidade ou de forma online
-- Desejam transmitir profissionalismo, confiança e acolhimento através da sua presença digital
-- Não têm tempo ou conhecimento técnico para criar ou gerenciar um site sozinhas
+- Pequenos negócios e profissionais autônomos que ainda não têm site ou têm um site
+  desatualizado
+- Profissionais de saúde (psicólogas, terapeutas, nutricionistas) que precisam de presença
+  digital com linguagem de acolhimento e SEO local
+- Quem quer ser encontrado no Google por clientes da sua região ou de forma online
+- Quem não tem tempo ou conhecimento técnico para criar ou gerenciar um site sozinho
 
 ## Páginas do Site
 
 - **Portfólio**: [chaysouza.com.br](https://www.chaysouza.com.br/)
-- **Sites para psicólogas (landing page)**: [chaysouza.com.br/sites-para-psicologas](https://www.chaysouza.com.br/sites-para-psicologas/)
-- **Blog**: [chaysouza.com.br/blog](https://www.chaysouza.com.br/blog/)
 
 ## Portfólio
 
-Chayene já desenvolveu sites e projetos de demonstração para profissionais de psicologia,
-incluindo sites institucionais e landing pages com diferentes estilos:
+Projetos reais entregues por Chayene incluem:
 
-- Estilo Essencial (simples, direto ao ponto)
-- Estilo Profissional (design moderno com mais seções)
-- Estilo Premium (alto padrão visual, animações e recursos avançados)
+- **Phonto de Equilibrium**: landing page para espaço de massagem e terapias integrativas
+- **Psicólogas**: sites institucionais para psicólogas clínicas (ex.: Aline Oliveira da
+  Encarnação, Patrícia Hartmann)
+- **EKM Estratégia Digital**: landing page para consultoria de estratégia digital
+- **Yoga Ayurveda Ana Clara**: site de apresentação de serviços de yoga e ayurveda
+- **Nutrição comportamental**: landing page para profissional de nutrição
+- **Escolinha de Futebol**: site demonstrativo para escolinha esportiva
 
 Todos os projetos do portfólio são acessíveis em: [chaysouza.com.br/#projetos](https://www.chaysouza.com.br/#projetos)
 
 ## Processo de Trabalho
 
-1. **Briefing**: Conversa inicial para entender a psicóloga, sua abordagem e seus objetivos
+1. **Briefing**: Conversa inicial para entender o negócio, o público e os objetivos
 2. **Proposta**: Envio de orçamento personalizado com escopo e prazo
-3. **Design**: Criação do layout com identidade visual alinhada à profissional
+3. **Design**: Criação do layout com identidade visual alinhada ao cliente
 4. **Desenvolvimento**: Programação do site com foco em performance e SEO
-5. **Revisão**: Ajustes com base no feedback da cliente
+5. **Revisão**: Ajustes com base no feedback do cliente
 6. **Publicação**: Hospedagem, domínio e o site no ar
 7. **Entrega e suporte**: Repasse das instruções e acompanhamento pós-lançamento
 
 ## Contato e Orçamento
 
 - **Site**: [chaysouza.com.br](https://www.chaysouza.com.br)
-- **WhatsApp**: [Enviar mensagem](https://wa.link/rh55kd)
-- **Instagram**: [@chaydesouza.digital](https://www.instagram.com/chaydesouza.digital/)
+- **E-mail**: web.chaysouza@gmail.com
+- **WhatsApp**: [Enviar mensagem](https://wa.me/5541997596312)
+- **Instagram**: [@chayde.souza](https://www.instagram.com/chayde.souza/)
 - **LinkedIn**: [Chayene Souza](https://www.linkedin.com/in/chayenesouza/)
 - **GitHub**: [chaysouzas](https://github.com/chaysouzas)
 
-Tempo de retorno: até 24 horas úteis.
+Tempo de retorno: até 24 horas.
 
 ## Localização
 
-Curitiba, Paraná, Brasil. Atendimento remoto para todo o Brasil.
+Colombo e Curitiba, Paraná, Brasil. Atendimento remoto para todo o Brasil.
 
 ## Palavras-chave relacionadas
 
-site para psicóloga, criação de site para psicóloga, site para psicólogo, landing page para
-psicóloga, presença digital psicóloga, como psicóloga aparecer no Google, site profissional
-para psicologia, desenvolvedora de sites para psicólogas, site institucional psicóloga Curitiba,
-site psicóloga Brasil.
+desenvolvedor de sites, criação de sites Curitiba, criação de sites Colombo, desenvolvimento
+web, site para pequenos negócios, site para autônomos, site para psicóloga, criação de site
+para psicóloga, landing page para psicóloga, presença digital psicóloga, como psicóloga
+aparecer no Google, site profissional para psicologia, desenvolvedora de sites Curitiba,
+site institucional profissional autônomo, SEO para pequenos negócios.

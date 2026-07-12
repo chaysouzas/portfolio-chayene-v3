@@ -29,3 +29,7 @@ yarn-error.log*
 
 # Vercel (se rodar localmente)
 .vercel/
+
+# Páginas despublicadas temporariamente (mantidas localmente, fora do deploy)
+/landingpage/
+/blog/
