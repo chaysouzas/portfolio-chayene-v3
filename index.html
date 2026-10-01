@@ -24,6 +24,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles/style.css">
 
   <!-- Schema.org structured data -->
@@ -53,27 +54,63 @@
     "knowsAbout": ["HTML", "CSS", "JavaScript", "SEO", "Marketing Digital", "Desenvolvimento Web"]
   }
   </script>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP4M87RPT"></script>
+  <!-- Google tag (gtag.js) — os eventos entram na fila já; o script (~190 KB) só baixa na
+       primeira interação ou 4 s após o load, para não disputar banda e CPU com o conteúdo -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-YTP4M87RPT');
+
+    (function () {
+      var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        events.forEach(function (e) { window.removeEventListener(e, loadGtag); });
+        var tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-YTP4M87RPT';
+        document.head.appendChild(tag);
+      }
+      events.forEach(function (e) { window.addEventListener(e, loadGtag, { once: true, passive: true }); });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 4000); });
+    })();
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
 
 
 
 </head>
 
 <body>
+
+<!-- Ícones: Font Awesome Free 6.5.1 (CC BY 4.0) — https://fontawesome.com/license/free -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol>
+  <symbol id="i-arrow-up-right-from-square" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></symbol>
+  <symbol id="i-chevron-up" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></symbol>
+  <symbol id="i-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol>
+  <symbol id="i-css3-alt" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 448 512"><path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/></symbol>
+  <symbol id="i-figma" viewBox="0 0 384 512"><path d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"/></symbol>
+  <symbol id="i-git-alt" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+  <symbol id="i-html5" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+  <symbol id="i-js" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></symbol>
+  <symbol id="i-linkedin-in" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol>
+  <symbol id="i-magnifying-glass" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+  <symbol id="i-xmark" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+</svg>
+
 
 <!-- Menu navegação -->
 <header id="navbar" role="banner">
@@ -90,7 +127,7 @@
   </nav>
   <div class="nav-actions">
     <button class="theme-btn" id="theme-toggle" aria-label="Alternar tema claro/escuro">
-      <i class="fa-solid fa-moon" id="theme-icon"></i>
+      <svg class="icon" id="theme-icon" aria-hidden="true"><use href="#i-moon"></use></svg>
     </button>
     <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
       <span></span>
@@ -139,8 +176,9 @@
           class="hero-octocat"
           src="assets/img/octocat-chayene-desenvolvedora-web-480.webp"
           srcset="assets/img/octocat-chayene-desenvolvedora-web-480.webp 480w,
+                  assets/img/octocat-chayene-desenvolvedora-web-680.webp 680w,
                   assets/img/octocat-chayene-desenvolvedora-web-900.webp 900w"
-          sizes="(max-width: 900px) 340px, 420px"
+          sizes="(max-width: 900px) min(62vw, 340px), 410px"
           width="900"
           height="1279"
           alt="Octocat da Chayene: personagem de boina, lenço de bolinhas e xícara de café na mão"
@@ -160,7 +198,7 @@
     <!-- CTAs (abaixo do Octocat) -->
     <div class="hero-ctas">
       <a href="#projetos" class="btn btn-primary">
-        Conheça meus projetos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        Conheça meus projetos <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
       </a>
       <a href="#contato" class="btn btn-outline">Vamos conversar</a>
     </div>
@@ -187,11 +225,14 @@
       <div class="sobre-image-wrap fade-in-right">
         <div class="sobre-image-frame">
           <img
-            src="assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba.webp"
+            src="assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba-960.webp"
+            srcset="assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba-480.webp 480w, assets/img/chayene-de-souza-desenvolvedora-frontend-curitiba-960.webp 960w"
+            sizes="(max-width: 900px) min(calc(100vw - 40px), 400px), 520px"
             alt="Chayene de Souza, desenvolvedora web em Colombo e Curitiba, trabalhando no computador"
-            width="465"
-            height="465"
+            width="960"
+            height="960"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -212,42 +253,42 @@
 
     <div class="skills-grid">
       <article class="skill-card fade-in delay-1">
-        <span class="skill-icon"><i class="fa-brands fa-html5"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-html5"></use></svg></span>
         <div>
           <h3 class="skill-name">HTML5</h3>
           <p class="skill-desc">Estrutura semântica e acessível, que o Google entende e leitores de tela conseguem navegar.</p>
         </div>
       </article>
       <article class="skill-card fade-in delay-2">
-        <span class="skill-icon"><i class="fa-brands fa-css3-alt"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-css3-alt"></use></svg></span>
         <div>
           <h3 class="skill-name">CSS3</h3>
           <p class="skill-desc">Layouts responsivos e animações leves, com a identidade visual fiel ao design em qualquer tela.</p>
         </div>
       </article>
       <article class="skill-card fade-in delay-1">
-        <span class="skill-icon"><i class="fa-brands fa-js"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-js"></use></svg></span>
         <div>
           <h3 class="skill-name">JavaScript</h3>
           <p class="skill-desc">Menu mobile, FAQ em acordeão, carrosséis e animações que aparecem conforme a página rola.</p>
         </div>
       </article>
       <article class="skill-card fade-in delay-2">
-        <span class="skill-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-magnifying-glass"></use></svg></span>
         <div>
           <h3 class="skill-name">SEO</h3>
           <p class="skill-desc">SEO on-page e local: títulos, meta descrições, dados estruturados e carregamento rápido.</p>
         </div>
       </article>
       <article class="skill-card fade-in delay-1">
-        <span class="skill-icon"><i class="fa-brands fa-figma"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-figma"></use></svg></span>
         <div>
           <h3 class="skill-name">Figma</h3>
           <p class="skill-desc">Onde o layout nasce: estrutura das páginas, paleta e tipografia antes da primeira linha de código.</p>
         </div>
       </article>
       <article class="skill-card fade-in delay-2">
-        <span class="skill-icon"><i class="fa-brands fa-git-alt"></i></span>
+        <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-git-alt"></use></svg></span>
         <div>
           <h3 class="skill-name">Git</h3>
           <p class="skill-desc">Versionamento de cada projeto, com o histórico de todas as mudanças até o site ir pro ar.</p>
@@ -279,9 +320,9 @@
       <!-- Featured Project — Psi. Cristy AD -->
       <article class="project-card featured fade-in" data-caption="Site da Psi. Cristy AD">
         <div class="project-image">
-          <img src="assets/img/site-landingpage-webdesign-psi-psicologa-sites-profissionais.jpg" alt="Site da psicóloga Cristy AD, psicologia analítica com atendimento online" loading="lazy" />
+          <img src="assets/img/site-landingpage-webdesign-psi-psicologa-sites-profissionais-1280.webp" srcset="assets/img/site-landingpage-webdesign-psi-psicologa-sites-profissionais-480.webp 480w, assets/img/site-landingpage-webdesign-psi-psicologa-sites-profissionais-960.webp 960w, assets/img/site-landingpage-webdesign-psi-psicologa-sites-profissionais-1280.webp 1280w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="1280" height="720" decoding="async" alt="Site da psicóloga Cristy AD, psicologia analítica com atendimento online" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -294,7 +335,7 @@
           <h3 class="project-title">Psi. Cristy AD</h3>
           <p class="project-desc">Site para psicóloga de abordagem junguiana com atendimento online. A proposta foi apresentar a Psicologia Analítica de um jeito próximo e sem julgamento, com fotos reais, paleta quente e um caminho curto até o agendamento pelo WhatsApp.</p>
           <div class="project-links">
-            <a href="https://www.psicologacristyad.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://www.psicologacristyad.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -305,9 +346,9 @@
       <!-- Project — Pesquisa Possível -->
       <article class="project-card fade-in delay-1" data-caption="Site Pesquisa Possível">
         <div class="project-image">
-          <img src="assets/img/site-landingpage-webdesign-pesquisa-academica.jpg" alt="Site Pesquisa Possível, mentoria em escrita acadêmica" loading="lazy" />
+          <img src="assets/img/site-landingpage-webdesign-pesquisa-academica-1280.webp" srcset="assets/img/site-landingpage-webdesign-pesquisa-academica-480.webp 480w, assets/img/site-landingpage-webdesign-pesquisa-academica-960.webp 960w, assets/img/site-landingpage-webdesign-pesquisa-academica-1280.webp 1280w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="1280" height="720" decoding="async" alt="Site Pesquisa Possível, mentoria em escrita acadêmica" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -320,7 +361,7 @@
           <h3 class="project-title">Pesquisa Possível</h3>
           <p class="project-desc">Site para uma mentora que acompanha pessoas nos desafios da escrita acadêmica. Além da apresentação dos atendimentos individuais, avaliações e FAQ, o projeto tem um blog com conteúdos sobre rotina de escrita e mestrado, pensado para atrair visitas pelo Google.</p>
           <div class="project-links">
-            <a href="https://www.pesquisapossivel.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://www.pesquisapossivel.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -328,9 +369,9 @@
       <!-- Project — Phonto de Equilibrium -->
       <article class="project-card fade-in delay-1" data-caption="Landing page Phonto de Equilibrium">
         <div class="project-image">
-          <img src="assets/img/phonto-de-equilibrium-portfolio-site-landing-page-desenvolvimento-web.jpg" alt="Landing page do espaço de massagem Phonto de Equilibrium" loading="lazy" />
+          <img src="assets/img/phonto-de-equilibrium-portfolio-site-landing-page-desenvolvimento-web-1280.webp" srcset="assets/img/phonto-de-equilibrium-portfolio-site-landing-page-desenvolvimento-web-480.webp 480w, assets/img/phonto-de-equilibrium-portfolio-site-landing-page-desenvolvimento-web-960.webp 960w, assets/img/phonto-de-equilibrium-portfolio-site-landing-page-desenvolvimento-web-1280.webp 1280w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="1280" height="720" decoding="async" alt="Landing page do espaço de massagem Phonto de Equilibrium" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -343,7 +384,7 @@
           <h3 class="project-title">Phonto de Equilibrium</h3>
           <p class="project-desc">Landing page criada para um espaço de massagem e terapias integrativas voltado ao bem-estar feminino. O desafio foi traduzir em design o conceito de equilíbrio entre corpo, mente e espírito, com uma identidade acolhedora, copy sensível ao propósito da marca e estrutura pensada para conversão e SEO local.</p>
           <div class="project-links">
-            <a href="https://phontodeequilibrium.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://phontodeequilibrium.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -351,9 +392,9 @@
       <!-- Project — Aline Oliveira -->
       <article class="project-card fade-in delay-1" data-caption="Site da Psi. Aline Oliveira da Encarnação">
         <div class="project-image">
-          <img src="assets/img/psi-psicologa-aline-portfolio-site-sites-profissionais-psicologo-landingpage.jpg" alt="Site da psicóloga Aline Oliveira da Encarnação" loading="lazy" />
+          <img src="assets/img/psi-psicologa-aline-portfolio-site-sites-profissionais-psicologo-landingpage-1280.webp" srcset="assets/img/psi-psicologa-aline-portfolio-site-sites-profissionais-psicologo-landingpage-480.webp 480w, assets/img/psi-psicologa-aline-portfolio-site-sites-profissionais-psicologo-landingpage-960.webp 960w, assets/img/psi-psicologa-aline-portfolio-site-sites-profissionais-psicologo-landingpage-1280.webp 1280w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="1280" height="720" decoding="async" alt="Site da psicóloga Aline Oliveira da Encarnação" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -366,7 +407,7 @@
           <h3 class="project-title">Psi. Aline Oliveira da Encarnação</h3>
           <p class="project-desc">O desafio foi criar uma identidade visual do zero junto com a cliente, alinhando tom de voz e paleta com o perfil de atendimento dela. Site leve, rápido e com estrutura de SEO local para aparecer nas buscas da região. A Aline queria algo que transmitisse acolhimento desde o primeiro scroll — e é exatamente isso que entregamos.</p>
           <div class="project-links">
-            <a href="https://www.psicologaalineoliiveira.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://www.psicologaalineoliiveira.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -374,9 +415,9 @@
       <!-- Project — Patrícia Hartmann -->
       <article class="project-card fade-in delay-1" data-caption="Site da Psi. Patrícia Hartmann">
         <div class="project-image">
-          <img src="assets/img/psi-psicologa-patricia-portfolio-site-sites-profissionais-psicologo-landingpage.jpg" alt="Site da psicóloga Patrícia Hartmann" loading="lazy" />
+          <img src="assets/img/psi-psicologa-patricia-portfolio-site-sites-profissionais-psicologo-landingpage-1280.webp" srcset="assets/img/psi-psicologa-patricia-portfolio-site-sites-profissionais-psicologo-landingpage-480.webp 480w, assets/img/psi-psicologa-patricia-portfolio-site-sites-profissionais-psicologo-landingpage-960.webp 960w, assets/img/psi-psicologa-patricia-portfolio-site-sites-profissionais-psicologo-landingpage-1280.webp 1280w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="1280" height="720" decoding="async" alt="Site da psicóloga Patrícia Hartmann" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -389,16 +430,16 @@
           <h3 class="project-title">Psi. Patrícia Hartmann</h3>
           <p class="project-desc">Site desenvolvido do zero: identidade visual, copy, SEO on-page, contato e mapa integrado com o Google. O site teve algumas versões e só foi pro ar quando ficou do jeito que a Patrícia queria: profissional, acolhedor e encontrável no Google.</p>
           <div class="project-links">
-            <a href="https://www.psicologapatriciahartmann.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://www.psicologapatriciahartmann.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
 
       <article class="project-card fade-in delay-1" data-caption="Landing Page EKM Estratégia digital">
         <div class="project-image">
-          <img src="assets/img/ekm-estrategia-digital-sites-site-profissional-landingpage.jpg" alt="Landing Page EKM Estratégia digital" loading="lazy" />
+          <img src="assets/img/ekm-estrategia-digital-sites-site-profissional-landingpage-1280.webp" srcset="assets/img/ekm-estrategia-digital-sites-site-profissional-landingpage-480.webp 480w, assets/img/ekm-estrategia-digital-sites-site-profissional-landingpage-960.webp 960w, assets/img/ekm-estrategia-digital-sites-site-profissional-landingpage-1280.webp 1280w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="1280" height="720" decoding="async" alt="Landing Page EKM Estratégia digital" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -411,7 +452,7 @@
           <h3 class="project-title">EKM - Estratégia digital</h3>
           <p class="project-desc">Site desenvolvido do zero: identidade visual, copy, SEO on-page, botão WhatsApp flutuante.</p>
           <div class="project-links">
-            <a href="https://ekmestrategiadigital.com.br/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://ekmestrategiadigital.com.br/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -419,9 +460,9 @@
       <!-- Project — Claudia Alves (demo) -->
       <article class="project-card fade-in delay-3" data-caption="Demonstrativo Psi. Claudia Alves">
         <div class="project-image">
-          <img src="assets/img/claudia-portfolio-chayene-souza-site-psicologa-site.webp" alt="Site demonstrativo Psi. Claudia Alves" loading="lazy" />
+          <img src="assets/img/claudia-portfolio-chayene-souza-site-psicologa-site-800.webp" srcset="assets/img/claudia-portfolio-chayene-souza-site-psicologa-site-480.webp 480w, assets/img/claudia-portfolio-chayene-souza-site-psicologa-site-800.webp 800w" sizes="(max-width: 900px) min(86vw, 400px), 570px" width="800" height="500" decoding="async" alt="Site demonstrativo Psi. Claudia Alves" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -432,7 +473,7 @@
           <h3 class="project-title">Psi. Claudia Alves — Demonstrativo</h3>
           <p class="project-desc">Primeiro modelo demonstrativo que criei. Serviu como laboratório para desenvolver a estrutura que uso nos projetos reais: seções bem definidas, acordeão de FAQ, animações por IntersectionObserver e menu mobile responsivo.</p>
           <div class="project-links">
-            <a href="https://chaysouzas.github.io/PSICO-CLAUDIA/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://chaysouzas.github.io/PSICO-CLAUDIA/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article>
@@ -442,7 +483,7 @@
         <div class="project-image">
           <img src="assets/img/saude-mental-em-foco-portfolio.png" alt="Site Saúde Mental Em Foco — projeto de faculdade" loading="lazy" />
           <div class="project-overlay">
-            <button class="project-overlay-btn lightbox-trigger"><i class="fa-solid fa-expand"></i> Ver imagem</button>
+            <button class="project-overlay-btn lightbox-trigger"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Ver imagem</button>
           </div>
         </div>
         <div class="project-info">
@@ -453,21 +494,23 @@
           <h3 class="project-title">Saúde Mental Em Foco</h3>
           <p class="project-desc">Projeto desenvolvido para a faculdade com um propósito real: reunir recursos de saúde mental, e disponibilizar informações sobre atendimento gratuito, ou com valor social em Curitiba.</p>
           <div class="project-links">
-            <a href="https://saude-mental-em-foco-v3.vercel.app/" target="_blank" rel="noopener" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver site</a>
+            <a href="https://saude-mental-em-foco-v3.vercel.app/" target="_blank" rel="noopener" class="project-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right-from-square"></use></svg> Ver site</a>
           </div>
         </div>
       </article> -->
 
       </div>
+
+      <!-- Informações do projeto ativo no carrossel 3D (preenchido pelo main.js no desktop) -->
+      <div class="projects-info" id="projects-info" aria-live="polite" hidden></div>
     </div>
 
     <div class="carousel-controls projects-controls">
       <button class="carousel-btn projects-prev" aria-label="Projeto anterior" aria-controls="projects-rest">
-        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
       </button>
-      <span class="projects-counter" id="projects-counter" aria-live="polite">1 / 6</span>
       <button class="carousel-btn carousel-btn--primary projects-next" aria-label="Próximo projeto" aria-controls="projects-rest">
-        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
       </button>
     </div>
   </div>
@@ -489,7 +532,7 @@
       <article class="mini-card fade-in delay-2">
         <a href="https://chaysouzas.github.io/yoga-ayurveda-ana-clara/" target="_blank" rel="noopener noreferrer" class="mini-card-link">
           <div class="mini-card-header">
-            <img src="assets/img/site-estudio-de-yoga_optimized.png" alt="Projeto Yoga Ayurveda Ana Clara" loading="lazy" />
+            <img src="assets/img/site-estudio-de-yoga.webp" alt="Projeto Yoga Ayurveda Ana Clara" loading="lazy" />
           </div>
           <h3 class="mini-card-title">Yoga Ayurveda Ana Clara</h3>
           <p class="mini-card-desc">Site para apresentação de serviços de yoga e ayurveda.</p>
@@ -499,7 +542,7 @@
             <article class="mini-card fade-in delay-2">
         <a href="https://nutri-fernanda-site.vercel.app/" target="_blank" rel="noopener noreferrer" class="mini-card-link">
           <div class="mini-card-header">
-            <img src="assets/img/site nutri.png" alt="Projeto landing page nutricionista." loading="lazy" />
+            <img src="assets/img/site-nutri.webp" alt="Projeto landing page nutricionista." loading="lazy" />
           </div>
           <h3 class="mini-card-title">Nutrição comportamental</h3>
           <p class="mini-card-desc">Landing page para profissional de nutrição.</p>
@@ -631,10 +674,10 @@
 
     <div class="carousel-controls">
       <button class="carousel-btn carousel-prev" aria-label="Depoimento anterior">
-        <i class="fa-solid fa-chevron-left"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
       </button>
       <button class="carousel-btn carousel-next" aria-label="Próximo depoimento">
-        <i class="fa-solid fa-chevron-right"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
       </button>
     </div>
   </div>
@@ -653,9 +696,9 @@
         <p>Tem um projeto em mente ou ainda está na fase de "será que preciso mesmo de um site?" Me manda uma mensagem. Respondo em até 24 horas.</p>
 
         <div class="contato-socials">
-          <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="mailto:web.chaysouza@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg></a>
+          <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="mailto:web.chaysouza@gmail.com" aria-label="E-mail"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg></a>
         </div>
       </div>
 
@@ -677,11 +720,11 @@
           </div>
           <button type="submit" class="form-submit">
             Enviar mensagem
-            <i class="fa-solid fa-arrow-right"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
           </button>
         </form>
         <div class="form-success" id="form-success">
-          <i class="fa-solid fa-circle-check"></i>
+          <svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg>
           <h3>Mensagem enviada!</h3>
           <p>Obrigada pelo contato. Retorno em até 24 horas.</p>
         </div>
@@ -699,11 +742,11 @@
       © 2025 <span>Chayene de Souza</span>. Todos os direitos reservados.
     </p>
     <div class="footer-socials">
-      <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/chaysouzas" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chayenesouza/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin-in"></use></svg></a>
+      <a href="https://github.com/chaysouzas" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg></a>
+      <a href="https://www.instagram.com/chayde.souza/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
 
-      <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://wa.me/5541997596312" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg></a>
     </div>
   </div>
 </footer>
@@ -718,18 +761,18 @@
   rel="noopener noreferrer"
   aria-label="Falar pelo WhatsApp"
 >
-  <i class="fa-brands fa-whatsapp"></i>
+  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
 </a>
 
 <button id="back-to-top" aria-label="Voltar ao topo">
-  <i class="fa-solid fa-chevron-up"></i>
+  <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"></use></svg>
 </button>
 
 <!-- ════════════════════════════════════════
      LIGHTBOX
 ════════════════════════════════════════ -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar"><svg class="icon" aria-hidden="true"><use href="#i-xmark"></use></svg></button>
   <img src="" alt="" class="lightbox-img" id="lightbox-img" />
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>

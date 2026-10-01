@@ -1,12 +1,13 @@
   const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
+  const themeIcon = document.getElementById('theme-icon').querySelector('use');
+  const setThemeIcon = name => themeIcon.setAttribute('href', `#i-${name}`);
   const html = document.documentElement;
   let isDark = true;
 
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     html.setAttribute('data-theme', 'light');
-    themeIcon.className = 'fa-solid fa-sun';
+    setThemeIcon('sun');
     isDark = false;
   }
 
@@ -14,11 +15,11 @@
     isDark = !isDark;
     if (isDark) {
       html.removeAttribute('data-theme');
-      themeIcon.className = 'fa-solid fa-moon';
+      setThemeIcon('moon');
       localStorage.setItem('theme', 'dark');
     } else {
       html.setAttribute('data-theme', 'light');
-      themeIcon.className = 'fa-solid fa-sun';
+      setThemeIcon('sun');
       localStorage.setItem('theme', 'light');
     }
   });
@@ -163,36 +164,138 @@
     }, 1200);
   });
 
-  /* ── Projects Carousel (mobile: scroll-snap nativo + botões) ── */
+  /* ── Projects Carousel: scroll-snap no mobile, palco 3D no desktop ── */
+  const projectsSection = document.getElementById('projetos');
   const projectsRest = document.getElementById('projects-rest');
-  const projectsCounter = document.getElementById('projects-counter');
-  const projectCards = projectsRest.querySelectorAll('.project-card');
+  const projectsInfo = document.getElementById('projects-info');
+  const projectCards = [...projectsRest.querySelectorAll('.project-card')];
+  const desktop3d = window.matchMedia('(min-width: 901px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let activeProject = 0;
 
+  const wrapProject = i => (i % projectCards.length + projectCards.length) % projectCards.length;
+  const is3d = () => projectsSection.classList.contains('projects-3d');
+
+  /* Mobile: posição calculada a partir da rolagem horizontal */
   function projectStep() {
     const gap = parseFloat(getComputedStyle(projectsRest).columnGap) || 0;
     return projectCards[0].offsetWidth + gap;
   }
 
-  function currentProject() {
+  function scrolledProject() {
     const maxScroll = projectsRest.scrollWidth - projectsRest.clientWidth;
     if (projectsRest.scrollLeft >= maxScroll - 2) return projectCards.length - 1;
     return Math.round(projectsRest.scrollLeft / projectStep());
   }
 
-  function goToProject(index) {
-    const last = projectCards.length - 1;
-    const target = index > last ? 0 : index < 0 ? last : index;
-    projectsRest.scrollTo({ left: target * projectStep(), behavior: 'smooth' });
+  /* Desktop: cada card se posiciona pela distância até o ativo (caminho circular) */
+  function layoutProjects3d() {
+    const n = projectCards.length;
+    projectCards.forEach((card, i) => {
+      let d = i - activeProject;
+      if (d > n / 2) d -= n;
+      if (d < -n / 2) d += n;
+      const abs = Math.abs(d);
+      const isActive = d === 0;
+
+      const spread = [0, 74, 128, 160][Math.min(abs, 3)] * Math.sign(d); // % da largura do card
+
+      card.style.transform =
+        `translate(-50%, -50%) translateX(${spread}%) translateY(${abs * 3}%) ` +
+        `translateZ(${-abs * 200}px) rotateY(${-d * 30}deg) rotateZ(${d * 3}deg)`;
+      card.style.opacity = abs > 2 ? 0 : 1 - abs * 0.25;
+      card.style.zIndex = n - abs;
+      card.style.filter = isActive ? '' : `brightness(${1 - abs * 0.22})`;
+      card.classList.toggle('is-active', isActive);
+      card.setAttribute('aria-hidden', String(!isActive));
+      card.querySelectorAll('a, button').forEach(el => { el.tabIndex = isActive ? 0 : -1; });
+    });
+
+    const info = projectCards[activeProject].querySelector('.project-info');
+    projectsInfo.innerHTML = info.innerHTML;
+    if (!reducedMotion.matches) {
+      projectsInfo.animate(
+        [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 450, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)' }
+      );
+    }
   }
 
-  function updateProjectsCounter() {
-    projectsCounter.textContent = `${currentProject() + 1} / ${projectCards.length}`;
+  function resetProjects3d() {
+    projectCards.forEach(card => {
+      card.style.transform = card.style.opacity = card.style.zIndex = card.style.filter = '';
+      card.classList.remove('is-active');
+      card.removeAttribute('aria-hidden');
+      card.querySelectorAll('a, button').forEach(el => el.removeAttribute('tabindex'));
+    });
+  }
+
+  function applyProjectsMode() {
+    projectsSection.classList.toggle('projects-3d', desktop3d.matches);
+    projectsInfo.hidden = !desktop3d.matches;
+    if (desktop3d.matches) {
+      layoutProjects3d();
+    } else {
+      resetProjects3d();
+      activeProject = 0;
+      projectsRest.scrollLeft = 0;
+    }
+  }
+
+  function goToProject(index) {
+    activeProject = wrapProject(index);
+    if (is3d()) {
+      layoutProjects3d();
+    } else {
+      projectsRest.scrollTo({ left: activeProject * projectStep(), behavior: 'smooth' });
+    }
+  }
+
+  function currentProject() {
+    return is3d() ? activeProject : scrolledProject();
   }
 
   document.querySelector('.projects-prev').addEventListener('click', () => goToProject(currentProject() - 1));
   document.querySelector('.projects-next').addEventListener('click', () => goToProject(currentProject() + 1));
-  projectsRest.addEventListener('scroll', updateProjectsCounter, { passive: true });
-  updateProjectsCounter();
+
+  /* Clique num card lateral traz ele para o centro (em vez de abrir o lightbox) */
+  let projectDragged = false;
+  projectsRest.addEventListener('click', e => {
+    if (!is3d()) return;
+    const card = e.target.closest('.project-card');
+    if (projectDragged || (card && !card.classList.contains('is-active'))) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!projectDragged && card) goToProject(projectCards.indexOf(card));
+    }
+  }, true);
+
+  /* Arrastar com mouse/caneta no desktop */
+  let dragStartX = null;
+  projectsRest.addEventListener('pointerdown', e => {
+    if (!is3d() || e.pointerType === 'touch') return;
+    dragStartX = e.clientX;
+  });
+  window.addEventListener('pointerup', e => {
+    if (dragStartX === null) return;
+    const diff = dragStartX - e.clientX;
+    dragStartX = null;
+    if (Math.abs(diff) > 50) {
+      projectDragged = true; // o click que vem logo depois do arraste é ignorado
+      setTimeout(() => { projectDragged = false; }, 0);
+      goToProject(activeProject + (diff > 0 ? 1 : -1));
+    }
+  });
+
+  projectsSection.addEventListener('keydown', e => {
+    if (!is3d() || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+    if (!e.target.closest('#projects-rest, .projects-controls')) return;
+    e.preventDefault();
+    goToProject(activeProject + (e.key === 'ArrowRight' ? 1 : -1));
+  });
+
+  desktop3d.addEventListener('change', applyProjectsMode);
+  applyProjectsMode();
 
   /* ── Testimonials Carousel ── */
   const carouselTrack = document.querySelector('.depoimentos-grid');
