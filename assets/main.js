@@ -72,15 +72,6 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* ── Parallax ── */
-  const parallaxBg = document.getElementById('parallax-bg');
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    if (parallaxBg && scrollY < window.innerHeight * 1.5) {
-      parallaxBg.style.transform = `translateY(${scrollY * 0.3}px)`;
-    }
-  }, { passive: true });
-
   /* ── Scroll Fade-in (IntersectionObserver) ── */
   const animatedEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
 
@@ -88,34 +79,12 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-
-        /* Animate skill bars */
-        const bars = entry.target.querySelectorAll('.skill-level-bar[data-level]');
-        bars.forEach(bar => {
-          bar.style.width = bar.dataset.level + '%';
-        });
-
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   animatedEls.forEach(el => observer.observe(el));
-
-  /* Also observe skill bars inside cards that are themselves animated */
-  const skillCards = document.querySelectorAll('.skill-card');
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bar = entry.target.querySelector('.skill-level-bar');
-        if (bar && bar.dataset.level) {
-          setTimeout(() => { bar.style.width = bar.dataset.level + '%'; }, 200);
-        }
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  skillCards.forEach(card => skillObserver.observe(card));
 
   /* ── Back to Top ── */
   document.getElementById('back-to-top').addEventListener('click', () => {
@@ -194,23 +163,54 @@
     }, 1200);
   });
 
+  /* ── Projects Carousel (mobile: scroll-snap nativo + botões) ── */
+  const projectsRest = document.getElementById('projects-rest');
+  const projectsCounter = document.getElementById('projects-counter');
+  const projectCards = projectsRest.querySelectorAll('.project-card');
+
+  function projectStep() {
+    const gap = parseFloat(getComputedStyle(projectsRest).columnGap) || 0;
+    return projectCards[0].offsetWidth + gap;
+  }
+
+  function currentProject() {
+    const maxScroll = projectsRest.scrollWidth - projectsRest.clientWidth;
+    if (projectsRest.scrollLeft >= maxScroll - 2) return projectCards.length - 1;
+    return Math.round(projectsRest.scrollLeft / projectStep());
+  }
+
+  function goToProject(index) {
+    const last = projectCards.length - 1;
+    const target = index > last ? 0 : index < 0 ? last : index;
+    projectsRest.scrollTo({ left: target * projectStep(), behavior: 'smooth' });
+  }
+
+  function updateProjectsCounter() {
+    projectsCounter.textContent = `${currentProject() + 1} / ${projectCards.length}`;
+  }
+
+  document.querySelector('.projects-prev').addEventListener('click', () => goToProject(currentProject() - 1));
+  document.querySelector('.projects-next').addEventListener('click', () => goToProject(currentProject() + 1));
+  projectsRest.addEventListener('scroll', updateProjectsCounter, { passive: true });
+  updateProjectsCounter();
+
   /* ── Testimonials Carousel ── */
   const carouselTrack = document.querySelector('.depoimentos-grid');
-  const carouselDots = document.querySelectorAll('.carousel-dot');
+  const carouselCards = carouselTrack.querySelectorAll('.depoimento-card');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
-  const totalCards = document.querySelectorAll('.depoimento-card').length;
   let currentSlide = 0;
 
   function goToSlide(index) {
-    currentSlide = (index + totalCards) % totalCards;
-    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-    carouselDots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    const perView = parseInt(getComputedStyle(carouselTrack).getPropertyValue('--per-view'), 10) || 1;
+    const lastSlide = Math.max(carouselCards.length - perView, 0);
+    currentSlide = index > lastSlide ? 0 : index < 0 ? lastSlide : index;
+    carouselTrack.style.transform = `translateX(-${carouselCards[currentSlide].offsetLeft}px)`;
   }
 
   prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
   nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
-  carouselDots.forEach(dot => dot.addEventListener('click', () => goToSlide(+dot.dataset.index)));
+  window.addEventListener('resize', () => goToSlide(currentSlide));
 
   let touchStartX = 0;
   carouselTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
